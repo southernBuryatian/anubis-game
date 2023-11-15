@@ -1,0 +1,46 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 34vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #a9bb95;
+  font-weight: bold;
+  line-height: 1.3;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(12px + 2vmin);
+  color: #0b1b26;
+}
+
+.Header-text {
+  font-family: -apple-system, Vyaz, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+.landing-text {
+  font-size: calc(8px + 2vmin);
+  color: #0b1b26;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.Input-with-button {
+  display: flex;
+}
+
+@media (max-width: 406px) {
+  .Input-with-button {
+    flex-direction: column;
+  }
+}
+
