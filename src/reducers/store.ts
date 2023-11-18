@@ -1,5 +1,8 @@
-import { configureStore } from '@reduxjs/toolkit'
+import { configureStore } from '@reduxjs/toolkit';
+import followerReducer from './followerReducer';
 
 export default configureStore({
-  reducer: {},
+  reducer: {
+    currentFollower: followerReducer,
+  },
 })
