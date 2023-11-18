@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import logo from './creepy-face.jpeg';
 import './FollowerRequest.css';
-import Button from '../../components/Button/Button';
+import { Button } from "nes-ui-react";
 
 function FollowerRequest() {
 
@@ -19,7 +19,9 @@ function FollowerRequest() {
         <div className='Flex-container'>
 
           <Button
-            success={isUserLeftContact}
+
+            color="warning"
+
             onClick={async () => {
                 try {
                   console.log('1');
@@ -28,21 +30,22 @@ function FollowerRequest() {
                   console.log(err);
                   alert('Пожалуйста, проверьте введённую информацию. Может, вы уже оставляли нам свой контакт?');
                 }
-            }}
-            text={!isUserLeftContact ? 'Опция 1': 'Спасибо! Мы с вами свяжемся ❤️'}/>
+            }}>
+            {!isUserLeftContact ? 'Опция 1': 'Спасибо! Мы с вами свяжемся ❤️'}
+          </Button>
 
           <Button
-            success={isUserLeftContact}
             onClick={async () => {
                 try {
                   console.log('2');
-                  //setIsUserLeftContact(true);
                 } catch (err) {
                   console.log(err);
                   alert('Пожалуйста, проверьте введённую информацию. Может, вы уже оставляли нам свой контакт?');
                 }
-            }}
-            text={!isUserLeftContact ? 'Опция 1': 'Спасибо! Мы с вами свяжемся ❤️'}/>
+            }}>
+            {!isUserLeftContact ? 'Опция 2': 'Спасибо! Мы с вами свяжемся ❤️'}
+          </Button>
+
 
 
         </div>
