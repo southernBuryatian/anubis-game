@@ -6,19 +6,20 @@ import { Screens } from './reducers/screenReducer';
 import FollowerRequest from './pages/FollowerRequest/FollowerRequest';
 
 function App() {
+  const currentFollowerId = useSelector((state: ReturnType<typeof store.getState>) => state.currentFollower.currentFollowerId);
+  const currentScreen = useSelector((state: ReturnType<typeof store.getState>) => state.screen.currentScreenId);
 
   const renderScreen = (screen: Screens) => {
     switch(screen) {
       case Screens.Office:
         return (<OfficePage/>);
       case Screens.FollowerDialogue:
-        return (<FollowerRequest followerId={'Ville'}/>);
+        return ((currentFollowerId !== null) ? <FollowerRequest followerId={currentFollowerId}/> : <OfficePage/>);
       default:
         return (<OfficePage/>);
     }
   }
 
-  const currentScreen = useSelector((state: ReturnType<typeof store.getState>) => state.screen.currentScreenId);
 
   return (
     renderScreen(currentScreen)
