@@ -9,6 +9,7 @@ function FollowerRequest( {followerId }: { followerId: string } ) {
   const followerConfig = FollowersConfig[followerId];
 
   const storylineStepId = 0;
+  const followerRequest = followerConfig.storyline[storylineStepId];
 
   // todo: iterate storyline to display all that available
 
@@ -20,44 +21,29 @@ function FollowerRequest( {followerId }: { followerId: string } ) {
         <Text size={'xlarge'}> {followerConfig.displayName} </Text>
         <Toast style={{ float: 'left' }} bubblePostion='left'>
           <Text>
-            {followerConfig.storyline[storylineStepId].requestText}
+            {followerRequest.requestText}
           </Text>
         </Toast>
 
         <div className='Flex-container'>
 
-          <Button
-            color="warning"
+          {followerRequest.options.map((option, index) => {
+            return (
+              <Button
+                key={index.toString()}
+                color={index % 2 === 0 ? "warning" : undefined}
+                onClick={async () => {
+                  try {
+                    console.log('1');
+                  } catch (err) {
+                    console.log(err);
+                  }
+                }}>
+                {option.optionText}
 
-            onClick={async () => {
-                try {
-                  console.log('1');
-                } catch (err) {
-                  console.log(err);
-                  alert('Пожалуйста, проверьте введённую информацию. Может, вы уже оставляли нам свой контакт?');
-                }
-            }}>
-
-            {/*todo: simplify, iterate options and display correct amount of buttons*/}
-
-            {followerConfig.storyline[storylineStepId].options[0].optionText}
-          </Button>
-
-          <Button
-            onClick={async () => {
-                try {
-                  console.log('2');
-                } catch (err) {
-                  console.log(err);
-                }
-            }}>
-
-            {/*//todo: simplify*/}
-
-            {followerConfig.storyline[storylineStepId].options[1].optionText}
-          </Button>
-
-
+              </Button>
+            )
+          })}
 
         </div>
       </header>
