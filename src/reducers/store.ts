@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
 import followerReducer from './followerReducer';
-import screenSlice from './screenReducer';
+import screenReducer from './screenReducer';
+import answersReducer from './answersReducer';
 
 export default configureStore({
   reducer: {
     currentFollower: followerReducer,
-    screen: screenSlice,
+    screen: screenReducer,
+    answers: answersReducer,
   },
 })

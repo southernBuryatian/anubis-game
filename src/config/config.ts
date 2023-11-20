@@ -1,12 +1,3 @@
-interface followerStorylineState {
-  "storylineStepId": number,
-  "chosenOptions": number[],
-  "storyline": [{
-    "requestText": string,
-    "options": replyOption[]
-  }]
-}
-
 interface replyOption {
   optionText: string,
   outcomeStep: number | null
@@ -22,11 +13,12 @@ interface FollowerInfo {
   storyline: storylineStep[]
 }
 
-interface Config {
- [key: string]: FollowerInfo
-}
 
-export const FollowersConfig: Config = {
+// todo: type FollowerId = 'Ville' | 'Bob' | etc;
+
+export type FollowerId = 'Ville';
+
+export const FollowersConfig: Record<FollowerId, FollowerInfo> = {
   Ville: {
     displayName: 'the famous Ville Valo',
     storyline:  [
