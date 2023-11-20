@@ -2,10 +2,9 @@ import React, { ReactNode } from 'react';
 import { useDispatch } from 'react-redux';
 import { openFollowerWindow } from '../../reducers/screenReducer';
 
-// todo: input: elementId and callback
+// todo: input: add callback
 
-const SvgWrapper = ({children}: {children: ReactNode}) => {
-
+const SvgWrapper = ({ elementId, children }: {elementId: string, children: ReactNode}) => {
 
   const dispatch = useDispatch();
 
@@ -15,12 +14,12 @@ const SvgWrapper = ({children}: {children: ReactNode}) => {
       dispatch(openFollowerWindow());
     };
 
-    const monitor = document.getElementById("monitor");
+    const monitor = document.getElementById(elementId);
 
     monitor?.addEventListener("click", onClick);
 
     return () => monitor?.removeEventListener("click", onClick);
-  }, [dispatch]);
+  }, [dispatch, elementId]);
 
   return (
     <>

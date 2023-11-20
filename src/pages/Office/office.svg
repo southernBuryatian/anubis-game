@@ -453,7 +453,6 @@
 						</g>
 					</g>
 					<g id="monitor" style="cursor: pointer">
-						<title>computer</title>
 						<polygon fill="#808080" points="828.566,497.489 1001.336,497.489 1001.336,623.744 827.736,623.744 						"></polygon>
 						<polygon fill="#FFFFFF" points="837.204,504.134 991.369,504.134 991.369,617.1 836.457,617.1 						"></polygon>
 						<polygon fill="#999999" points="1001.336,623.744 984.723,637.033 798.664,637.033 827.736,623.744 						"></polygon>

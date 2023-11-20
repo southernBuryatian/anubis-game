@@ -12,7 +12,7 @@ function App() {
       case Screens.Office:
         return (<OfficePage/>);
       case Screens.FollowerDialogue:
-        return (<FollowerRequest/>);
+        return (<FollowerRequest followerId={'Ville'}/>);
       default:
         return (<OfficePage/>);
     }
@@ -20,7 +20,6 @@ function App() {
 
   const currentScreen = useSelector((state: ReturnType<typeof store.getState>) => state.screen.currentScreenId);
 
-  console.log(currentScreen);
   return (
     renderScreen(currentScreen)
   );

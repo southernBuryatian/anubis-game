@@ -1,10 +1,12 @@
-import { ReactComponent as OfficeImage } from "./home_office.svg";
+import { ReactComponent as OfficeImage } from "./office.svg";
 import SvgWrapper from '../../components/SvgWrapper/SvgWrapper';
 
 function OfficePage () {
 
+  const monitorElementId = 'monitor';
+
   return (
-    <SvgWrapper>
+    <SvgWrapper elementId={monitorElementId}>
       <OfficeImage/>
     </SvgWrapper>
   )
