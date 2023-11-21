@@ -1,7 +1,8 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { FollowerId } from '../config/config';
 
 interface FollowerState {
-  currentFollowerId: number | null
+  currentFollowerId: FollowerId | null
 }
 
 export const followerSlice = createSlice({
@@ -10,7 +11,7 @@ export const followerSlice = createSlice({
     currentFollowerId: null,
   },
   reducers: {
-    chooseFollower: (state: FollowerState, action) => {
+    chooseFollower: (state: FollowerState, action: PayloadAction<FollowerId>) => {
       state.currentFollowerId = action.payload
     },
     closeFollowerWindow: (state: FollowerState) => {

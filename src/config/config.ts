@@ -1,12 +1,3 @@
-interface followerStorylineState {
-  "storylineStepId": number,
-  "chosenOptions": number[],
-  "storyline": [{
-    "requestText": string,
-    "options": replyOption[]
-  }]
-}
-
 interface replyOption {
   optionText: string,
   outcomeStep: number | null
@@ -17,58 +8,43 @@ interface storylineStep {
   options: replyOption[]
 }
 
-const Ville: storylineStep[] = [
-  {
-    "requestText": "We are so young, Our lives have just begun, But already we're considering escape from this world...",
-    "options": [
+interface FollowerInfo {
+  displayName: string,
+  storyline: storylineStep[]
+}
+
+
+// todo: type FollowerId = 'Ville' | 'Bob' | etc;
+
+export type FollowerId = 'Ville';
+
+export const FollowersConfig: Record<FollowerId, FollowerInfo> = {
+  Ville: {
+    displayName: 'the famous Ville Valo',
+    storyline:  [
       {
-        "optionText": "Do it, Ville, nobody likes your songs anyway",
-        "outcomeStep": null
+        "requestText": "We are so young, Our lives have just begun, But already we're considering escape from this world...",
+        "options": [
+          {
+            "optionText": "Do it, Ville, nobody likes your songs anyway",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Wait! I will join you in death",
+            "outcomeStep": 1
+          }
+        ]
       },
       {
-        "optionText": "Wait! I will join you in death",
-        "outcomeStep": 1
-      }
+        "requestText": "This live ain't worth living... Baby join me in death.",
+        "options": [
+          {
+            "optionText": "I will die tonight for love.",
+            "outcomeStep": null
+          }
+        ]
+      },
     ]
-  },
-  {
-    "requestText": "This live ain't worth living... Baby join me in death.",
-    "options": [
-      {
-        "optionText": "I will die tonight for love.",
-        "outcomeStep": null
-      }
-    ]
-  },
-];
-
-export const config = {
-  "Slimey Jackie": {
-    "storylineStepId": 0,
-    "chosenOptions": [],
-    "storyline": []
-  },
-  "Sad sad Ville": {
-    "storylineStepId": 0,
-    "chosenOptions": [],
-    "storyline": [{
-      "requestText": "We are so young, Our lives have just begun, But already we're considering escape from this world...",
-      "options": [
-        {
-          "optionText": "Do it, Ville, nobody likes your songs anyway",
-          "outcomeStep": null
-        },
-        {
-          "optionText": "Wait! I will join you in death",
-          "outcomeStep": null
-        }
-      ]
-    }]
-  },
-  "Clownfaced Joe": {
-
-  },
-  "Flattering Ryan": {
-
   }
 }
+

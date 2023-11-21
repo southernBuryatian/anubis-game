@@ -24,7 +24,6 @@ export const screenSlice = createSlice({
     openFollowerWindow: (state: screenState) => {
       state.currentScreenId = Screens.FollowerDialogue;
       state.previousScreenId = Screens.FollowersList;
-      console.log(`reducer: state.currentScreenId = ${state.currentScreenId}` );
     },
     closeFollowerWindow: (state: screenState) => {
       state.currentScreenId = Screens.FollowersList;

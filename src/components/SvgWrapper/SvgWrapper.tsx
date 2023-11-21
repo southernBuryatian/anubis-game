@@ -1,26 +1,21 @@
 import React, { ReactNode } from 'react';
-import { useDispatch } from 'react-redux';
-import { openFollowerWindow } from '../../reducers/screenReducer';
 
-// todo: input: elementId and callback
-
-const SvgWrapper = ({children}: {children: ReactNode}) => {
-
-
-  const dispatch = useDispatch();
+const SvgWrapper = ({elementId, callback, children }: {
+  elementId: string,
+  callback: () => void,
+  children: ReactNode
+}) => {
 
   React.useEffect(() => {
 
     const onClick = () => {
-      dispatch(openFollowerWindow());
+      callback();
     };
+    const clickableElement = document.getElementById(elementId);
+    clickableElement?.addEventListener("click", onClick);
 
-    const monitor = document.getElementById("monitor");
-
-    monitor?.addEventListener("click", onClick);
-
-    return () => monitor?.removeEventListener("click", onClick);
-  }, [dispatch]);
+    return () => clickableElement?.removeEventListener("click", onClick);
+  }, [callback, elementId]);
 
   return (
     <>
