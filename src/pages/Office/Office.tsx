@@ -14,7 +14,7 @@ function OfficePage () {
       elementId={monitorElementId}
       callback={() => {
         dispatch(openFollowerWindow());
-        dispatch(chooseFollower('Ville'));
+        dispatch(chooseFollower(0));
       }
     }
     >

@@ -2,14 +2,14 @@ import React from 'react';
 import logo from './creepy-face.jpeg';
 import './FollowerRequest.css';
 import { Button, Toast, Text } from "nes-ui-react";
-import { FollowerId, FollowersConfig } from '../../config/config';
+import { FollowersConfig } from '../../config/config';
 import { useDispatch, useSelector } from 'react-redux';
 import { chooseAnswer } from '../../reducers/answersReducer';
 import store from '../../reducers/store';
 
-function FollowerRequest( { followerId }: { followerId: FollowerId } ) {
+function FollowerRequest( { followerIndex }: { followerIndex: number } ) {
 
-  const followerConfig = FollowersConfig[followerId];
+  const followerConfig = FollowersConfig[followerIndex];
 
   const storylineStepId = 0;
   const followerRequest = followerConfig.storyline[storylineStepId];
@@ -17,7 +17,7 @@ function FollowerRequest( { followerId }: { followerId: FollowerId } ) {
   const dispatch = useDispatch();
 
   const answers = useSelector((state: ReturnType<typeof store.getState>) => state.answers);
-  const followerAnswers = answers[followerId];
+  const followerAnswers = answers[followerIndex];
 
   // todo: iterate storyline to display all that available
 
@@ -26,7 +26,7 @@ function FollowerRequest( { followerId }: { followerId: FollowerId } ) {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
 
-        <Text size={'xlarge'}> {followerConfig.displayName} </Text>
+        <Text size={'xlarge'} color='white'> {followerConfig.name} </Text>
         <Toast style={{ float: 'left' }} bubblePostion='left'>
           <Text>
             {followerRequest.requestText}
@@ -34,8 +34,9 @@ function FollowerRequest( { followerId }: { followerId: FollowerId } ) {
         </Toast>
 
         {
-          followerAnswers.currentStorylineStepId === storylineStepId
-          && followerAnswers.chosenOptions[storylineStepId] !== null ?
+          (followerAnswers.currentStorylineStepId === storylineStepId
+          && Object.keys(followerAnswers.chosenOptions).length !== 0
+          && typeof followerAnswers.chosenOptions[storylineStepId] === 'number') ?
             <Toast style={{ float: 'right' }} bubblePostion='right'>
               <Text>
                 {followerRequest.options[followerAnswers.chosenOptions[storylineStepId]].optionText}
@@ -52,7 +53,7 @@ function FollowerRequest( { followerId }: { followerId: FollowerId } ) {
                     color={index % 2 === 0 ? "warning" : undefined}
                     onClick={async () => {
                       try {
-                        dispatch(chooseAnswer({followerId, storylineStepId, chosenOption: index}))
+                        dispatch(chooseAnswer({followerIndex, storylineStepId, chosenOption: index}))
                       } catch (err) {
                         console.log(err);
                       }
