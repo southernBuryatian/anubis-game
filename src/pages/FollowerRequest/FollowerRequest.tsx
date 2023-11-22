@@ -26,7 +26,7 @@ function FollowerRequest( { followerId }: { followerId: FollowerId } ) {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
 
-        <Text size={'xlarge'}> {followerConfig.displayName} </Text>
+        <Text size={'xlarge'} color='white'> {followerConfig.displayName} </Text>
         <Toast style={{ float: 'left' }} bubblePostion='left'>
           <Text>
             {followerRequest.requestText}

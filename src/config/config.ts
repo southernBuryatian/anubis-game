@@ -16,9 +16,9 @@ interface FollowerInfo {
 
 // todo: type FollowerId = 'Ville' | 'Bob' | etc;
 
-export type FollowerId = 'Ville';
+export type FollowerId = keyof typeof FollowersConfig;
 
-export const FollowersConfig: Record<FollowerId, FollowerInfo> = {
+export const FollowersConfig: any = {
   Ville: {
     displayName: 'the famous Ville Valo',
     storyline:  [
@@ -45,6 +45,29 @@ export const FollowersConfig: Record<FollowerId, FollowerInfo> = {
         ]
       },
     ]
-  }
-}
+  },
+
+  Bob: {
+    displayName: "Bob the Burly Bodybuilder",
+    storyline: [
+      {
+        "requestText": "",
+        "options": []
+      }
+    ]
+
+  },
+
+  Samantha: {
+    displayName: "Bob the Sculptor",
+    storyline: [
+      {
+        "requestText": "",
+        "options": []
+      }
+    ]
+
+  },
+
+} as const
 
