@@ -17,7 +17,7 @@ function App() {
       case Screens.Desktop:
         return (<DesktopPage/>)
       case Screens.FollowerDialogue:
-        return ((currentFollowerId !== null) ? <FollowerRequest followerId={currentFollowerId}/> : <OfficePage/>);
+        return ((currentFollowerId !== null) ? <FollowerRequest followerIndex={currentFollowerId}/> : <OfficePage/>);
       default:
         return (<OfficePage/>);
     }

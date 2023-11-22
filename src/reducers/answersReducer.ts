@@ -1,26 +1,23 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { FollowerId } from '../config/config';
+import { FollowersConfig } from '../config/config';
 
 interface followerStorylineState {
   currentStorylineStepId: number,
-  chosenOptions: { [storylineStepId: number]: number | null },
+  chosenOptions: { [storylineStepId: number]: number },
 }
 
 interface answersState {
-  [followerId: string]: followerStorylineState
+  [followerIndex: number]: followerStorylineState
 }
 
-const initialState = {
-  Ville: {
-    currentStorylineStepId: 0,
-    chosenOptions: { 0: null }
-  }
-};
+const initialState = FollowersConfig.map((): followerStorylineState => {
+  return {currentStorylineStepId: 0, chosenOptions: {}}
+} )
 
 interface answerPayload {
-  followerId: FollowerId,
+  followerIndex: number,
   storylineStepId: number,
-  chosenOption: number | null
+  chosenOption: number
 }
 
 export const answersSlice = createSlice({
@@ -29,9 +26,7 @@ export const answersSlice = createSlice({
   reducers: {
     chooseAnswer: (state: answersState, action: PayloadAction<answerPayload>) => {
       const answer = action.payload;
-      if (action.payload.chosenOption != null) {
-        state[answer.followerId].chosenOptions[answer.storylineStepId] = action.payload.chosenOption;
-      }
+      state[answer.followerIndex].chosenOptions[answer.storylineStepId] = action.payload.chosenOption;
     },
   },
 })

@@ -8,7 +8,7 @@ function DesktopPage () {
   return (<div className="DesktopWrapper" onClick={
     () => {
       dispatch(openFollowerWindow());
-      dispatch(chooseFollower('Ville'));
+      dispatch(chooseFollower(0));
     }
   }></div>)
 }
