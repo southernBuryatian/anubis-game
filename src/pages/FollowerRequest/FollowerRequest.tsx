@@ -34,8 +34,9 @@ function FollowerRequest( { followerIndex }: { followerIndex: number } ) {
         </Toast>
 
         {
-          followerAnswers.currentStorylineStepId === storylineStepId
-          && followerAnswers.chosenOptions[storylineStepId] !== null ?
+          (followerAnswers.currentStorylineStepId === storylineStepId
+          && Object.keys(followerAnswers.chosenOptions).length !== 0
+          && typeof followerAnswers.chosenOptions[storylineStepId] === 'number') ?
             <Toast style={{ float: 'right' }} bubblePostion='right'>
               <Text>
                 {followerRequest.options[followerAnswers.chosenOptions[storylineStepId]].optionText}
