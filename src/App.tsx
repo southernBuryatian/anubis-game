@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import store from './reducers/store';
 import { Screens } from './reducers/screenReducer';
 import FollowerRequest from './pages/FollowerRequest/FollowerRequest';
+import DesktopPage from './pages/Desktop/Desktop';
 
 function App() {
   const currentFollowerId = useSelector((state: ReturnType<typeof store.getState>) => state.currentFollower.currentFollowerId);
@@ -13,6 +14,8 @@ function App() {
     switch(screen) {
       case Screens.Office:
         return (<OfficePage/>);
+      case Screens.Desktop:
+        return (<DesktopPage/>)
       case Screens.FollowerDialogue:
         return ((currentFollowerId !== null) ? <FollowerRequest followerIndex={currentFollowerId}/> : <OfficePage/>);
       default:

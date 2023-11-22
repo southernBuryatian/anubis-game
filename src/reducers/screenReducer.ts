@@ -21,6 +21,10 @@ export const screenSlice = createSlice({
     currentScreenId: Screens.Office,
   },
   reducers: {
+    openDesktopScreen: (state: screenState) => {
+      state.currentScreenId = Screens.Desktop;
+      state.previousScreenId = Screens.Office;
+    },
     openFollowerWindow: (state: screenState) => {
       state.currentScreenId = Screens.FollowerDialogue;
       state.previousScreenId = Screens.FollowersList;
@@ -32,6 +36,6 @@ export const screenSlice = createSlice({
   },
 })
 
-export const { openFollowerWindow, closeFollowerWindow } = screenSlice.actions
+export const { openFollowerWindow, openDesktopScreen, closeFollowerWindow } = screenSlice.actions
 
 export default screenSlice.reducer
