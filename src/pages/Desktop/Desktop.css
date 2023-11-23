@@ -2,14 +2,24 @@
     border: solid 25px #808080;
     height: 100vh;
     display: flex;
+    padding: 15px;
     flex-direction: column;
     background-color: blue;
 }
 
-.logo {
+.DesktopWallpaper {
+    background-color: teal;
+}
+
+.OSLogo {
     height: 65%;
     margin-top: 5%;
     margin-bottom: 2%;
+}
+
+.AppIcon {
+    width: 64px;
+    height: 64px;
 }
 
 .loader {
