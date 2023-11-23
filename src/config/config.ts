@@ -31,5 +31,24 @@ export const FollowersConfig: FollowerInfo[] = [
         ]
       }
     ]
+  },
+
+  {
+    name: "Bob the Burly Bodybuilder",
+    storyline: [
+      {
+        requestText: "I have called out my crash's supervisor to arm-wrestling. I don't know what to do now...",
+        options: [
+          {
+            optionText: "What? You better talk honeslty to her about your feelings!",
+            outcomeStep: null
+          },
+          {
+            optionText: "You should apologize about this challenge, my friend.",
+            outcomeStep: 1
+          }
+        ]
+      }
+    ]
   }
 ]
