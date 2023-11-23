@@ -1,0 +1,7 @@
+#dialogue {
+    font-size: 3em;
+}
+
+#dialogue:hover{
+    cursor: pointer;
+}
