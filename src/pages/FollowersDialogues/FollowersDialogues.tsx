@@ -3,19 +3,34 @@ import { FollowersConfig } from '../../config/config';
 import { useDispatch } from 'react-redux';
 import { chooseFollower } from '../../reducers/followerReducer';
 import { openFollowerWindow } from '../../reducers/screenReducer';
-
+import { Container, Text } from 'nes-ui-react';
 
 function FollowersDialogues() {
-    
     const dispatch = useDispatch();
 
-    let content = FollowersConfig.map(
-        (follower, index) => <li onClick={() => {dispatch(chooseFollower(index)); dispatch(openFollowerWindow());}} 
-        id='dialogue'>{follower.name}</li>);
+    const content = FollowersConfig.map(
+      (follower, index) =>
+        <div
+          onClick={
+          () => {
+            dispatch(chooseFollower(index));
+            dispatch(openFollowerWindow());
+          }
+        }>
+        <Container
+          roundedCorners={true}
+          align={'center'}
+        >
+          <Text size={'xlarge'}>
+            { follower.name }
+          </Text>
+        </Container>
+        </div>
+);
     return (
-        <ul id='listOfDialogues'>
-            {content}
-        </ul>
+      <div>
+          { content }
+      </div>
     )
 }
 
