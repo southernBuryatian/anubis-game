@@ -5,6 +5,7 @@ import store from './reducers/store';
 import { Screens } from './reducers/screenReducer';
 import FollowerRequest from './pages/FollowerRequest/FollowerRequest';
 import DesktopPage from './pages/Desktop/Desktop';
+import FollowersDialogues from './pages/FollowersDialogues/FollowersDialogues';
 
 function App() {
   const currentFollowerId = useSelector((state: ReturnType<typeof store.getState>) => state.currentFollower.currentFollowerId);
@@ -18,6 +19,8 @@ function App() {
         return (<DesktopPage/>)
       case Screens.FollowerDialogue:
         return ((currentFollowerId !== null) ? <FollowerRequest followerIndex={currentFollowerId}/> : <OfficePage/>);
+      case Screens.FollowersList:
+        return (<FollowersDialogues/>);
       default:
         return (<OfficePage/>);
     }
