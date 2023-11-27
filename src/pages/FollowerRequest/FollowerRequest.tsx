@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './creepy-face.jpeg';
 import './FollowerRequest.css';
 import { Button, Toast, Text, Menu, Modal, Spacer, Header, Heading, IconButton, PixelIcon, ModalContent } from "nes-ui-react";
 import { FollowersConfig } from '../../config/followersConfig';
@@ -22,6 +21,13 @@ function FollowerRequest( { followerIndex }: { followerIndex: number } ) {
   const answers = useSelector((state: ReturnType<typeof store.getState>) => state.answers);
   const followerAnswers = answers[followerIndex];
 
+  let imageSrc = null;
+  try {
+    imageSrc = require(`../../config/FollowersAvatars/${followerConfig.name}.png`);
+  } catch (e) {
+    console.log(followerConfig.name);
+  }
+
   // todo: iterate storyline to display all that available
 
   return (
@@ -37,7 +43,7 @@ function FollowerRequest( { followerIndex }: { followerIndex: number } ) {
         </Header>
 
         <ModalContent className='ModalContent'>
-          <img src={logo} className="FollowerAvatar" alt={followerConfig.name} />
+          {imageSrc && <img src={imageSrc} className="FollowerAvatar" alt={followerConfig.name} />}
 
           <Text size={'xlarge'} color='white'> {followerConfig.name} </Text>
           <Toast style={{ float: 'left' }} bubblePostion='left'>
