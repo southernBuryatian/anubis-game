@@ -1,0 +1,10 @@
+.Wrapper {
+    border: solid 25px #808080;
+    height: 100vh;
+    padding: 15px;
+}
+
+.inner {
+    height: 100%;
+    width: 100%;
+}

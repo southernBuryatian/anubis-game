@@ -7,6 +7,7 @@ import Creators from './AppIcons/Creators.png'
 import WorshiperService from './AppIcons/WorshiperService.png'
 import { useEffect, useState } from 'react';
 import AppIcon from './AppIcon/AppIcon';
+import ComputerScreenPageWrapper from '../../components/ComputerScreenPageWrapper/ComputerScreenPageWrapper';
 
 function DesktopPage () {
   const dispatch = useDispatch();
@@ -21,6 +22,7 @@ function DesktopPage () {
 
   return (
     isLoading ?
+      <ComputerScreenPageWrapper BGColor={'blue'}>
       <div
         className="DesktopWrapper"
         onClick={() => {
@@ -29,13 +31,15 @@ function DesktopPage () {
         <TempleOSLogo className="OSLogo"/>
         <span className="loader"/>
       </div>
+        </ComputerScreenPageWrapper>
       :
-      <div
-        className="DesktopWrapper DesktopWallpaper">
-        <AppIcon onClick={ () => {dispatch(openFollowersDialogues()); } } imgSrc={WorshiperService} imgAlt={WorshiperService} AppName={'Worshiper Service'} />
-        <AppIcon onClick={ () => {dispatch(openFollowersDialogues()); } } imgSrc={GodMighty} imgAlt={GodMighty} AppName={'GodMighty'} />
-        <AppIcon onClick={ () => {dispatch(openFollowersDialogues()); } } imgSrc={Creators} imgAlt={Creators} AppName={'Creators'} />
-      </div>
+      <ComputerScreenPageWrapper BGColor={'teal'}>
+        <div className="DesktopWrapper">
+          <AppIcon onClick={ () => {dispatch(openFollowersDialogues()); } } imgSrc={WorshiperService} imgAlt={WorshiperService} AppName={'Worshiper Service'} />
+          <AppIcon onClick={ () => {dispatch(openFollowersDialogues()); } } imgSrc={GodMighty} imgAlt={GodMighty} AppName={'GodMighty'} />
+          <AppIcon onClick={ () => {dispatch(openFollowersDialogues()); } } imgSrc={Creators} imgAlt={Creators} AppName={'Creators'} />
+        </div>
+      </ComputerScreenPageWrapper>
   )
 }
 

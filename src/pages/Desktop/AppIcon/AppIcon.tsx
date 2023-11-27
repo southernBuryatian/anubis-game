@@ -1,4 +1,4 @@
-import './Desktop.css';
+import './AppIcon.css';
 import { Text } from 'nes-ui-react';
 
 function AppIcon (
