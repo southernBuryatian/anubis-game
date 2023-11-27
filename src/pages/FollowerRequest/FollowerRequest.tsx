@@ -2,11 +2,12 @@ import React from 'react';
 import logo from './creepy-face.jpeg';
 import './FollowerRequest.css';
 import { Button, Toast, Text, Menu, Modal, Spacer, Header, Heading, IconButton, PixelIcon, ModalContent } from "nes-ui-react";
-import { FollowersConfig } from '../../config/config';
+import { FollowersConfig } from '../../config/followersConfig';
 import { useDispatch, useSelector } from 'react-redux';
 import { chooseAnswer } from '../../reducers/answersReducer';
 import { openFollowersDialogues } from '../../reducers/screenReducer';
 import store from '../../reducers/store';
+import ComputerScreenPageWrapper from '../../components/ComputerScreenPageWrapper/ComputerScreenPageWrapper';
 
 function FollowerRequest( { followerIndex }: { followerIndex: number } ) {
 
@@ -24,18 +25,18 @@ function FollowerRequest( { followerIndex }: { followerIndex: number } ) {
   // todo: iterate storyline to display all that available
 
   return (
-    <Modal open={true} backdrop={false}>
-      <Header>
-        <Spacer />
-        <Heading dense></Heading>
-        <Spacer />
-        <IconButton color="error" size="small" onClick={() => {dispatch(openFollowersDialogues())}}>
-          <PixelIcon name="pixelicon-close" size='small' />
-        </IconButton>
-      </Header>
+    <ComputerScreenPageWrapper>
+      <Modal open={true} backdrop={false}>
+        <Header>
+          <Spacer />
+          <Heading dense></Heading>
+          <Spacer />
+          <IconButton color="error" size="small" onClick={() => {dispatch(openFollowersDialogues())}}>
+            <PixelIcon name="pixelicon-close" size='small' />
+          </IconButton>
+        </Header>
 
-      <ModalContent className='ModalContent'>
-
+        <ModalContent className='ModalContent'>
           <img src={logo} className="FollowerAvatar" alt={followerConfig.name} />
 
           <Text size={'xlarge'} color='white'> {followerConfig.name} </Text>
@@ -78,8 +79,9 @@ function FollowerRequest( { followerIndex }: { followerIndex: number } ) {
               </Menu>
           }
 
-      </ModalContent>
-    </Modal>
+        </ModalContent>
+      </Modal>
+    </ComputerScreenPageWrapper>
   );
 }
 

@@ -4,6 +4,7 @@ import { openDesktopScreen } from '../../reducers/screenReducer';
 import { useDispatch } from 'react-redux';
 import { Button } from "nes-ui-react";
 import { openScriptLine } from '../../reducers/dialogueReducer';
+import { switchTimeBlock } from '../../reducers/timeReducer';
 
 function OfficePage () {
 
@@ -25,7 +26,7 @@ function OfficePage () {
       <OfficeImage/>
       <Button
         onClick={() => {
-          console.log('change day')
+          dispatch(switchTimeBlock());
         }}
       >
         'Next day'
