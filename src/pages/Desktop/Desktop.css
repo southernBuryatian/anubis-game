@@ -1,14 +1,7 @@
 .DesktopWrapper {
-    border: solid 25px #808080;
-    height: 100vh;
     display: flex;
-    padding: 15px;
     flex-direction: column;
-    background-color: blue;
-}
-
-.DesktopWallpaper {
-    background-color: teal;
+    height: 100%;
 }
 
 .OSLogo {

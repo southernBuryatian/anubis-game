@@ -6,10 +6,13 @@ import { Screens } from './reducers/screenReducer';
 import FollowerRequest from './pages/FollowerRequest/FollowerRequest';
 import DesktopPage from './pages/Desktop/Desktop';
 import FollowersDialogues from './pages/FollowersDialogues/FollowersDialogues';
+import SpeechBalloon from './components/SpeechBaloon/SpeechBalloon';
 
 function App() {
   const currentFollowerId = useSelector((state: ReturnType<typeof store.getState>) => state.currentFollower.currentFollowerId);
   const currentScreen = useSelector((state: ReturnType<typeof store.getState>) => state.screen.currentScreenId);
+
+  const currentScriptLine = useSelector((state: ReturnType<typeof store.getState>) => state.dialogues.currentScriptLine);
 
   const renderScreen = (screen: Screens) => {
     switch(screen) {
@@ -28,7 +31,10 @@ function App() {
 
 
   return (
-    renderScreen(currentScreen)
+    <>
+      {currentScriptLine && <SpeechBalloon text={currentScriptLine}/>}
+      {renderScreen(currentScreen)}
+    </>
   );
 }
 
