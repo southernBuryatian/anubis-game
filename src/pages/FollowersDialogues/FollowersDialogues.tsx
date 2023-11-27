@@ -9,23 +9,26 @@ function FollowersDialogues() {
     const dispatch = useDispatch();
 
     const content = FollowersConfig.map(
-      (follower, index) =>
-        <div
-          onClick={
-          () => {
+      (follower, index) => {
+        console.log(follower.name);
+        return <div
+          key={index}
+          onClick={ () =>
+          {
             dispatch(chooseFollower(index));
             dispatch(openFollowerWindow());
           }
-        }>
-        <Container
-          roundedCorners={true}
-          align={'center'}
-        >
-          <Text size={'xlarge'}>
-            { follower.name }
-          </Text>
-        </Container>
+          }>
+          <Container
+            roundedCorners={true}
+            align={'center'}
+          >
+            <Text size={'xlarge'}>
+              { follower.name }
+            </Text>
+          </Container>
         </div>
+      }
 );
     return (
       <div>

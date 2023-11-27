@@ -2,6 +2,7 @@ import { ReactComponent as OfficeImage } from "./test-office.svg";
 import SvgWrapper from '../../components/SvgWrapper/SvgWrapper';
 import { openDesktopScreen } from '../../reducers/screenReducer';
 import { useDispatch } from 'react-redux';
+import { Button } from "nes-ui-react";
 
 function OfficePage () {
 
@@ -17,6 +18,13 @@ function OfficePage () {
     }
     >
       <OfficeImage/>
+      <Button
+        onClick={() => {
+          console.log('change day')
+        }}
+      >
+        'Next day'
+      </Button>
     </SvgWrapper>
   )
 }
