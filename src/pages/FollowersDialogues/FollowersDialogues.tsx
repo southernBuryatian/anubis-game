@@ -10,7 +10,6 @@ function FollowersDialogues() {
 
     const content = FollowersConfig.map(
       (follower, index) => {
-        console.log(follower.name);
         return <div
           key={index}
           onClick={ () =>

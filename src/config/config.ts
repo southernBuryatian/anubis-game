@@ -48,312 +48,312 @@ export const FollowersConfig: FollowerInfo[] = [
       }
     ]
   },
-    {
-      "name": "Bob the Burly Bodybuilder",
-      "storyline": [
-        {
-          "requestText": "I have called out my crush's supervisor to arm-wrestling. I don't know what to do now...",
-          "options": [
-            {
-              "optionText": "You should apologize about this challenge, my friend.",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "Showcase your strength through achievements at work instead.",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "What? You better talk honestly to her about your feelings!",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "Challenge everyone in the office to arm-wrestling matches to assert dominance.",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "Start a rumor that arm-wrestling prowess is directly linked to job performance.",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "Solve workplace conflicts with thumb wrestling matches.",
-              "outcomeStep": null
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Charlie the Culinary Artist",
-      "storyline": [
-        {
-          "requestText": "Charlie added too much spice to the company potluck, and now everyone is complaining about heartburn.",
-          "options": [
-            {
-              "optionText": "Apologize and offer to organize a milder potluck next time.",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "Host a spice-tasting event to showcase different flavors.",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "Share recipes for a variety of dishes with coworkers.",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "Infuse all future dishes with even more spice to assert dominance.",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "Declare yourself the 'Spice King' and demand tribute from coworkers.",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "Organize a hot sauce taste-testing event during an important meeting.",
-              "outcomeStep": null
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Lucy the Lumberjack",
-      "storyline": [
-        {
-          "requestText": "Lucy accidentally hugged a coworker, and now they won't stop sharing personal information.",
-          "options": [
-            {
-              "optionText": "Politely talk to the coworker about personal space.",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "Suggest a team-building activity to redirect attention.",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "Share a funny story to lighten the atmosphere.",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "Hug every coworker to establish a new level of camaraderie.",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "Start a 'Talk to a Tree' therapy session for the office.",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "Encourage more hugs to improve workplace morale.",
-              "outcomeStep": null
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Gary the Green Thumb",
-      "storyline": [
-        {
-          "requestText": "Gary's well-tended garden is attracting too many tourists, causing disturbances in the neighborhood.",
-          "options": [
-            {
-              "optionText": "Organize guided garden tours at scheduled times.",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "Propose creating a community garden to share the beauty.",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "Install discreet signs requesting respectful viewing.",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "Install a toll booth for garden tours to generate income.",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "Start a reality TV show about the secret lives of plants.",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "Hire garden gnomes as security to manage tourist crowds.",
-              "outcomeStep": null
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Olivia the Office Analyst",
-      "storyline": [
-        {
-          "requestText": "Olivia predicted a project failure, causing panic in the workplace.",
-          "options": [
-            {
-              "optionText": "Focus on presenting solutions to avoid failure.",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "Collaborate with the team to address concerns.",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "Share positive aspects of the project to boost morale.",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "Predict random and absurd events to keep the office on its toes.",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "Replace all business meetings with magic eight-ball consultations.",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "Predict success in everything, regardless of the actual situation.",
-              "outcomeStep": null
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Max the Music Enthusiast",
-      "storyline": [
-        {
-          "requestText": "Max composed a catchy jingle for a commercial, and now it's stuck in everyone's head.",
-          "options": [
-            {
-              "optionText": "Create a new jingle that's more subtle.",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "Apologize and offer a different advertising approach.",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "Turn the jingle into a positive marketing campaign.",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "Compose a jingle that includes subliminal messages to control minds.",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "Start a musical flash mob at inconvenient times to boost spirits.",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "Replace all elevator music with your catchy jingle.",
-              "outcomeStep": null
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Fiona the Farm-to-Table Farmer",
-      "storyline": [
-        {
-          "requestText": "Fiona's farm-fresh eggs are revealing too much about people's personal lives, causing discomfort.",
-          "options": [
-            {
-              "optionText": "Stop selling eggs with fortunes attached.",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "Offer a disclaimer about the fortune-telling aspect.",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "Create a separate line for regular farm products.",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "Attach fake fortunes to eggs, predicting outlandish events.",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "Convince people that eating farm-fresh eggs will grant superpowers.",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "Start a rumor that the eggs are actually secret government spies.",
-              "outcomeStep": null
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Dexter the Distinguished Gentleman",
-      "storyline": [
-        {
-          "requestText": "Dexter's beard has become a local sensation, and people constantly want to touch it for luck.",
-          "options": [
-            {
-              "optionText": "Politely educate people about personal space.",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "Trim the beard for practicality while maintaining style.",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "Share amusing beard-related stories to connect with people.",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "Offer beard-touching sessions for a fee.",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "Host a 'Beard Olympics' to showcase the versatility of facial hair.",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "Convince everyone that beard grooming is the key to success.",
-              "outcomeStep": null
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Penelope the Painter",
-      "storyline": [
-        {
-          "requestText": "Penelope accidentally used the wrong color on a community mural, causing confusion.",
-          "options": [
-            {
-              "optionText": "Organize a community painting day to correct the mural.",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "Add explanatory signage to the mural.",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "Collaborate with other artists for a mural makeover.",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "Paint all future murals in invisible ink for a mysterious vibe.",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "Declare the mural a social experiment to test observational skills.",
-              "outcomeStep": null
-            },
-            {
-              "optionText": "Create an art movement based on confusing and ambiguous murals.",
-              "outcomeStep": null
-            }
-          ]
-        }
-      ]
-    },
+  {
+    "name": "Bob the Burly Bodybuilder",
+    "storyline": [
+      {
+        "requestText": "I have called out my crush's supervisor to arm-wrestling. I don't know what to do now...",
+        "options": [
+          {
+            "optionText": "You should apologize about this challenge, my friend.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Showcase your strength through achievements at work instead.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "What? You better talk honestly to her about your feelings!",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Challenge everyone in the office to arm-wrestling matches to assert dominance.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Start a rumor that arm-wrestling prowess is directly linked to job performance.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Solve workplace conflicts with thumb wrestling matches.",
+            "outcomeStep": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Charlie the Culinary Artist",
+    "storyline": [
+      {
+        "requestText": "Charlie added too much spice to the company potluck, and now everyone is complaining about heartburn.",
+        "options": [
+          {
+            "optionText": "Apologize and offer to organize a milder potluck next time.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Host a spice-tasting event to showcase different flavors.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Share recipes for a variety of dishes with coworkers.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Infuse all future dishes with even more spice to assert dominance.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Declare yourself the 'Spice King' and demand tribute from coworkers.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Organize a hot sauce taste-testing event during an important meeting.",
+            "outcomeStep": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Lucy the Lumberjack",
+    "storyline": [
+      {
+        "requestText": "Lucy accidentally hugged a coworker, and now they won't stop sharing personal information.",
+        "options": [
+          {
+            "optionText": "Politely talk to the coworker about personal space.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Suggest a team-building activity to redirect attention.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Share a funny story to lighten the atmosphere.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Hug every coworker to establish a new level of camaraderie.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Start a 'Talk to a Tree' therapy session for the office.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Encourage more hugs to improve workplace morale.",
+            "outcomeStep": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Gary the Green Thumb",
+    "storyline": [
+      {
+        "requestText": "Gary's well-tended garden is attracting too many tourists, causing disturbances in the neighborhood.",
+        "options": [
+          {
+            "optionText": "Organize guided garden tours at scheduled times.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Propose creating a community garden to share the beauty.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Install discreet signs requesting respectful viewing.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Install a toll booth for garden tours to generate income.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Start a reality TV show about the secret lives of plants.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Hire garden gnomes as security to manage tourist crowds.",
+            "outcomeStep": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Olivia the Office Analyst",
+    "storyline": [
+      {
+        "requestText": "Olivia predicted a project failure, causing panic in the workplace.",
+        "options": [
+          {
+            "optionText": "Focus on presenting solutions to avoid failure.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Collaborate with the team to address concerns.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Share positive aspects of the project to boost morale.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Predict random and absurd events to keep the office on its toes.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Replace all business meetings with magic eight-ball consultations.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Predict success in everything, regardless of the actual situation.",
+            "outcomeStep": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Max the Music Enthusiast",
+    "storyline": [
+      {
+        "requestText": "Max composed a catchy jingle for a commercial, and now it's stuck in everyone's head.",
+        "options": [
+          {
+            "optionText": "Create a new jingle that's more subtle.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Apologize and offer a different advertising approach.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Turn the jingle into a positive marketing campaign.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Compose a jingle that includes subliminal messages to control minds.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Start a musical flash mob at inconvenient times to boost spirits.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Replace all elevator music with your catchy jingle.",
+            "outcomeStep": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fiona the Farm-to-Table Farmer",
+    "storyline": [
+      {
+        "requestText": "Fiona's farm-fresh eggs are revealing too much about people's personal lives, causing discomfort.",
+        "options": [
+          {
+            "optionText": "Stop selling eggs with fortunes attached.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Offer a disclaimer about the fortune-telling aspect.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Create a separate line for regular farm products.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Attach fake fortunes to eggs, predicting outlandish events.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Convince people that eating farm-fresh eggs will grant superpowers.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Start a rumor that the eggs are actually secret government spies.",
+            "outcomeStep": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Dexter the Distinguished Gentleman",
+    "storyline": [
+      {
+        "requestText": "Dexter's beard has become a local sensation, and people constantly want to touch it for luck.",
+        "options": [
+          {
+            "optionText": "Politely educate people about personal space.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Trim the beard for practicality while maintaining style.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Share amusing beard-related stories to connect with people.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Offer beard-touching sessions for a fee.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Host a 'Beard Olympics' to showcase the versatility of facial hair.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Convince everyone that beard grooming is the key to success.",
+            "outcomeStep": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Penelope the Painter",
+    "storyline": [
+      {
+        "requestText": "Penelope accidentally used the wrong color on a community mural, causing confusion.",
+        "options": [
+          {
+            "optionText": "Organize a community painting day to correct the mural.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Add explanatory signage to the mural.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Collaborate with other artists for a mural makeover.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Paint all future murals in invisible ink for a mysterious vibe.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Declare the mural a social experiment to test observational skills.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Create an art movement based on confusing and ambiguous murals.",
+            "outcomeStep": null
+          }
+        ]
+      }
+    ]
+  },
   {
     "name": "Yasmine the Yoga Enthusiast",
     "storyline": [
@@ -818,5 +818,4 @@ export const FollowersConfig: FollowerInfo[] = [
       }
     ]
   }
-
 ]

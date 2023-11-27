@@ -1,4 +1,4 @@
-import { ReactComponent as OfficeImage } from "./test-office.svg";
+import { ReactComponent as OfficeImage } from "./office.svg";
 import SvgWrapper from '../../components/SvgWrapper/SvgWrapper';
 import { openDesktopScreen } from '../../reducers/screenReducer';
 import { useDispatch } from 'react-redux';
