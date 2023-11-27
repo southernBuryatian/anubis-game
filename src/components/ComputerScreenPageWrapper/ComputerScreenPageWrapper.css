@@ -1,10 +1,8 @@
-.Wrapper {
+.ComputerWrapper {
     border: solid 25px #808080;
     height: 100vh;
     padding: 15px;
+    overflow: auto;
+    background-color: teal;
 }
 
-.inner {
-    height: 100%;
-    width: 100%;
-}

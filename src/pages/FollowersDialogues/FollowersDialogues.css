@@ -1,7 +1,15 @@
-#dialogue {
-    font-size: 3em;
+
+.FollowerListItem {
+    display: flex;
+    flex-direction: row;
+    cursor: var(--cursor-click-url),pointer;
 }
 
-#dialogue:hover{
-    cursor: pointer;
+.FollowerListItemImage {
+    max-height: 100px;
+    margin: 15px;
+}
+
+.FollowerListItemText {
+    align-self: center;
 }
