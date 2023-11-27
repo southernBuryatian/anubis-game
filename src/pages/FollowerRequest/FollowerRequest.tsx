@@ -5,6 +5,7 @@ import { Button, Toast, Text } from "nes-ui-react";
 import { FollowersConfig } from '../../config/config';
 import { useDispatch, useSelector } from 'react-redux';
 import { chooseAnswer } from '../../reducers/answersReducer';
+import { openFollowersDialogues } from '../../reducers/screenReducer';
 import store from '../../reducers/store';
 
 function FollowerRequest( { followerIndex }: { followerIndex: number } ) {
@@ -24,6 +25,7 @@ function FollowerRequest( { followerIndex }: { followerIndex: number } ) {
   return (
     <div className="App">
       <header className="App-header">
+        <Button id='openChats' onClick={() => dispatch(openFollowersDialogues())}>Chats</Button>
         <img src={logo} className="App-logo" alt="logo" />
 
         <Text size={'xlarge'} color='white'> {followerConfig.name} </Text>

@@ -4,7 +4,7 @@ export enum Screens {
   Office,
   Desktop,
   FollowersList,
-  FollowerDialogue
+  FollowerDialogue,
 }
 
 export type ScreenId = Screens;
@@ -32,10 +32,14 @@ export const screenSlice = createSlice({
     closeFollowerWindow: (state: screenState) => {
       state.currentScreenId = Screens.FollowersList;
       state.previousScreenId = Screens.Desktop;
+    },
+    openFollowersDialogues: (state: screenState) => {
+      state.currentScreenId = Screens.FollowersList;
+      state.previousScreenId = Screens.FollowerDialogue;
     }
   },
 })
 
-export const { openFollowerWindow, openDesktopScreen, closeFollowerWindow } = screenSlice.actions
+export const { openFollowerWindow, openDesktopScreen, closeFollowerWindow, openFollowersDialogues } = screenSlice.actions
 
 export default screenSlice.reducer
