@@ -5,41 +5,39 @@ export enum Screens {
   Desktop,
   FollowersList,
   FollowerDialogue,
+  GodsRating
 }
 
 export type ScreenId = Screens;
 
 interface screenState {
-  previousScreenId: ScreenId;
   currentScreenId: ScreenId;
 }
 
 export const screenSlice = createSlice({
   name: 'screen',
   initialState: {
-    previousScreenId: Screens.Office,
     currentScreenId: Screens.Office,
   },
   reducers: {
     openDesktopScreen: (state: screenState) => {
       state.currentScreenId = Screens.Desktop;
-      state.previousScreenId = Screens.Office;
     },
     openFollowerWindow: (state: screenState) => {
       state.currentScreenId = Screens.FollowerDialogue;
-      state.previousScreenId = Screens.FollowersList;
-    },
-    closeFollowerWindow: (state: screenState) => {
-      state.currentScreenId = Screens.FollowersList;
-      state.previousScreenId = Screens.Desktop;
     },
     openFollowersDialogues: (state: screenState) => {
       state.currentScreenId = Screens.FollowersList;
-      state.previousScreenId = Screens.FollowerDialogue;
-    }
+    },
+    openGodsRating: (state: screenState) => {
+      state.currentScreenId = Screens.GodsRating;
+    },
+    closeDesktop: (state: screenState) => {
+      state.currentScreenId = Screens.Office;
+    },
   },
 })
 
-export const { openFollowerWindow, openDesktopScreen, closeFollowerWindow, openFollowersDialogues } = screenSlice.actions
+export const { openFollowerWindow, openDesktopScreen, openFollowersDialogues, closeDesktop, openGodsRating } = screenSlice.actions
 
 export default screenSlice.reducer
