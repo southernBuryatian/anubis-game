@@ -1,51 +1,61 @@
 import './FollowersDialogues.css';
 import { FollowersConfig } from '../../config/followersConfig';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { chooseFollower } from '../../reducers/followerReducer';
 import { openDesktopScreen, openFollowerWindow } from '../../reducers/screenReducer';
 import { Container, Header, Heading, IconButton, Modal, PixelIcon, Spacer, Text } from 'nes-ui-react';
 import ComputerScreenPageWrapper from '../../components/ComputerScreenPageWrapper/ComputerScreenPageWrapper';
 import React from 'react';
+import store from '../../reducers/store';
 
 function FollowersDialogues() {
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
+  const storylineStepId = useSelector((state: ReturnType<typeof store.getState>) => state.time).currentTimeBlock;
+  const answers = useSelector((state: ReturnType<typeof store.getState>) => state.storylines);
 
-    const content = FollowersConfig.map(
-      (follower, index) => {
-        let imageSrc = null;
-        try {
-          imageSrc = require(`../../config/FollowersAvatars/${follower.name}.png`);
-        } catch (e) {
-          console.log(follower.name);
-        }
-        return <div
-          key={index}
-          onClick={ () =>
-          {
-            dispatch(chooseFollower(index));
-            dispatch(openFollowerWindow());
-          }
-          }>
-          <Container
-            roundedCorners={true}
-            align={'center'}
-            className="FollowerListItem"
-          >
-            {imageSrc && <img
-              src={imageSrc}
-              alt={`${follower.name}`}
-              className="FollowerListItemImage"
-            />}
-            <Text
-              size={'xlarge'}
-              className="FollowerListItemText"
-            >
-              { follower.name }
-            </Text>
-          </Container>
-        </div>
+  const content = FollowersConfig.map(
+    (follower, index) => {
+      let imageSrc = null;
+      try {
+        imageSrc = require(`../../config/FollowersAvatars/${follower.name}.png`);
+      } catch (e) {
+        console.log(follower.name);
       }
-);
+
+      return !follower.storyline[storylineStepId] ?
+      <></> :
+      <div
+        key={index}
+        onClick={ () =>
+        {
+          dispatch(chooseFollower(index));
+          dispatch(openFollowerWindow());
+        }
+        }>
+        <Container
+          roundedCorners={true}
+          align={'center'}
+          className="FollowerListItem"
+        >
+          {imageSrc && <img
+            src={imageSrc}
+            alt={`${follower.name}`}
+            className="FollowerListItemImage"
+          />}
+          <Text
+            size={'xlarge'}
+            className="FollowerListItemText"
+          >
+            { follower.name }
+          </Text>
+          {
+            !Object.keys(answers[index].chosenOptions)[storylineStepId] &&
+            <span className="nes-ui-badge nes-ui-is-error FollowerListItemBadge">Not answered</span>
+          }
+        </Container>
+      </div>
+    }
+    );
     return (
       <ComputerScreenPageWrapper>
         <Modal open={true} backdrop={false}>

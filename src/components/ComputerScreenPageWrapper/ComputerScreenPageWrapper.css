@@ -1,6 +1,6 @@
 .ComputerWrapper {
     border: solid 25px #808080;
-    border-bottom-width: 50px;
+    border-bottom-width: 60px;
     height: 100vh;
     padding: 15px;
     overflow: auto;
@@ -9,7 +9,7 @@
 
 .ShutdownButton {
     position: fixed;
-    bottom: 0;
+    bottom: 5px;
     left: 48%;
 }
 

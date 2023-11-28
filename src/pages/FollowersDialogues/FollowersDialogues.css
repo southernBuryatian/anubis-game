@@ -13,3 +13,10 @@
 .FollowerListItemText {
     align-self: center;
 }
+
+.FollowerListItemBadge {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background-color: var(--error-color-normal);
+}

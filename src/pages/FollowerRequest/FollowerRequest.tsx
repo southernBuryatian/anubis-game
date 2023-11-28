@@ -3,23 +3,27 @@ import './FollowerRequest.css';
 import { Button, Toast, Text, Menu, Modal, Spacer, Header, Heading, IconButton, PixelIcon, ModalContent } from "nes-ui-react";
 import { FollowersConfig } from '../../config/followersConfig';
 import { useDispatch, useSelector } from 'react-redux';
-import { chooseAnswer } from '../../reducers/answersReducer';
+import { chooseAnswer, executeNextStep } from '../../reducers/answersReducer';
 import { openFollowersDialogues } from '../../reducers/screenReducer';
 import store from '../../reducers/store';
 import ComputerScreenPageWrapper from '../../components/ComputerScreenPageWrapper/ComputerScreenPageWrapper';
 
 function FollowerRequest( { followerIndex }: { followerIndex: number } ) {
 
-  const followerConfig = FollowersConfig[followerIndex];
-
-  // todo: remove hardcode
-  const storylineStepId = 0;
-  const followerRequest = followerConfig.storyline[storylineStepId];
-
   const dispatch = useDispatch();
 
-  const answers = useSelector((state: ReturnType<typeof store.getState>) => state.answers);
-  const followerAnswers = answers[followerIndex];
+  const followerConfig = FollowersConfig[followerIndex];
+
+  // todo: take day from config somewhere
+  const storylineStepId = useSelector((state: ReturnType<typeof store.getState>) => state.time).currentTimeBlock;
+  const followerRequest = followerConfig.storyline[storylineStepId];
+
+  const storylines = useSelector((state: ReturnType<typeof store.getState>) => state.storylines);
+  const followerStoryline = storylines[followerIndex];
+
+  if (followerStoryline.nextStorylineStepId === storylineStepId) {
+    dispatch(executeNextStep(followerIndex));
+  }
 
   let imageSrc = null;
   try {
@@ -52,13 +56,13 @@ function FollowerRequest( { followerIndex }: { followerIndex: number } ) {
             </Text>
           </Toast>
 
-          {
-            (followerAnswers.currentStorylineStepId === storylineStepId
-              && Object.keys(followerAnswers.chosenOptions).length !== 0
-              && typeof followerAnswers.chosenOptions[storylineStepId] === 'number') ?
+          {(
+            followerStoryline.currentStorylineStepId === storylineStepId
+            && typeof followerStoryline.chosenOptions[storylineStepId] === 'number'
+          ) ?
               <Toast style={{ float: 'right' }} bubblePostion='right'>
                 <Text>
-                  {followerRequest.options[followerAnswers.chosenOptions[storylineStepId]].optionText}
+                  {followerRequest.options[followerStoryline.chosenOptions[storylineStepId]].optionText}
                 </Text>
               </Toast>
 
@@ -73,7 +77,12 @@ function FollowerRequest( { followerIndex }: { followerIndex: number } ) {
                       color={index % 2 === 0 ? "warning" : undefined}
                       onClick={async () => {
                         try {
-                          dispatch(chooseAnswer({followerIndex, storylineStepId, chosenOption: index}))
+                          dispatch(chooseAnswer({
+                            followerIndex,
+                            storylineStepId,
+                            chosenOption: index,
+                            nextStep: option.outcomeStep
+                          }))
                         } catch (err) {
                           console.log(err);
                         }
