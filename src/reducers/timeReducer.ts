@@ -4,6 +4,8 @@ interface TimeState {
   currentTimeBlock: number,
 }
 
+export const gameDuration = 7;
+
 export const timeSlice = createSlice({
   name: 'time',
   initialState: {
@@ -11,7 +13,9 @@ export const timeSlice = createSlice({
   },
   reducers: {
     switchTimeBlock: (state: TimeState) => {
-      state.currentTimeBlock += state.currentTimeBlock;
+      if (state.currentTimeBlock < gameDuration) {
+        state.currentTimeBlock = state.currentTimeBlock + 1;
+      }
     },
   },
 })

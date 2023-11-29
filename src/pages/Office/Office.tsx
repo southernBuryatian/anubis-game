@@ -13,7 +13,7 @@ function OfficePage () {
 
   // todo: remove hardcode
 
-  dispatch(openScriptLine('What a dull office. Three thousands of years ago work conditions were much better.'))
+  //dispatch(openScriptLine('What a dull office. Three thousands of years ago work conditions were much better.'))
 
   return (
     <SvgWrapper

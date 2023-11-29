@@ -7,6 +7,7 @@ import FollowerRequest from './pages/FollowerRequest/FollowerRequest';
 import DesktopPage from './pages/Desktop/Desktop';
 import FollowersDialogues from './pages/FollowersDialogues/FollowersDialogues';
 import SpeechBalloon from './components/SpeechBaloon/SpeechBalloon';
+import GodsRating from './pages/GodsRating/GodsRating';
 
 function App() {
   const currentFollowerId = useSelector((state: ReturnType<typeof store.getState>) => state.currentFollower.currentFollowerId);
@@ -20,6 +21,8 @@ function App() {
         return (<OfficePage/>);
       case Screens.Desktop:
         return (<DesktopPage/>)
+      case Screens.GodsRating:
+        return (<GodsRating/>)
       case Screens.FollowerDialogue:
         return ((currentFollowerId !== null) ? <FollowerRequest followerIndex={currentFollowerId}/> : <OfficePage/>);
       case Screens.FollowersList:

@@ -21,7 +21,7 @@ export const FollowersConfig: FollowerInfo[] = [
         requestText: "Hi! I have accidentally broken my neighbor's garden gnome while creating my new statue. I wonder what I could do now...",
         options: [
           {
-            optionText: "Offer to repair the damaged garden gnome",
+            optionText: "Repair the damaged garden gnome",
             outcomeStep: null
           },
           {
@@ -33,11 +33,11 @@ export const FollowersConfig: FollowerInfo[] = [
             outcomeStep: null
           },
           {
-            optionText: "Suggest turning all garden gnomes into abstract art to create a trend",
+            optionText: "Suggest turning all their garden gnomes into abstract art to create a trend",
             outcomeStep: null
           },
           {
-            optionText: "Sculpt a pineapple as a symbol of a new era in garden art",
+            optionText: "Sculpt a pineapple instead of a gnome as a symbol of a new era in garden art",
             outcomeStep: null
           },
           {
@@ -86,7 +86,7 @@ export const FollowersConfig: FollowerInfo[] = [
     "name": "Charlie the Culinary Artist",
     "storyline": [
       {
-        "requestText": "Charlie added too much spice to the company potluck, and now everyone is complaining about heartburn.",
+        "requestText": "I accidentally added too much spice to the company potluck... It's been three days already since, but everyone is still complaining about heartburn. What should I do?",
         "options": [
           {
             "optionText": "Apologize and offer to organize a milder potluck next time.",
@@ -102,18 +102,47 @@ export const FollowersConfig: FollowerInfo[] = [
           },
           {
             "optionText": "Infuse all future dishes with even more spice to assert dominance.",
-            "outcomeStep": null
+            "outcomeStep": 1
           },
           {
             "optionText": "Declare yourself the 'Spice King' and demand tribute from coworkers.",
-            "outcomeStep": null
+            "outcomeStep": 1
           },
           {
             "optionText": "Organize a hot sauce taste-testing event during an important meeting.",
             "outcomeStep": null
           }
         ]
-      }
+      },
+      {
+        requestText: "So, things have taken a turn for the absurd here in the office. Inspired by my Spice King declaration, my coworkers have transformed our workspace into a spicy wonderland. The office decor has reached new heights of quirkiness, with spice-scented air fresheners, chili pepper-shaped desk accessories, and, believe it or not, a spice-filled piñata hanging around. It's like working in a spicy carnival!\n" + "\n" + "But that's not where the madness stops. The spice obsession has escalated into downright peculiar rituals. We now kick off our mornings with spice-themed chants that I can't quite comprehend, and our team-building exercises involve bizarre spice-infused activities. Meetings have become a spice spectacle, with a ceremonial \"spice scepter\" being passed to the speaker, and decisions are somehow tied to the spiciness of the snacks offered. It's beyond surreal.\n" + "\n" + "Now, here's the twist. I need your divine advice on how to navigate this absurd spice-induced chaos. I've got a feeling things might be spiraling out of control, and I'm not sure how to bring back a sense of normalcy without causing more unintended consequences. What should I do to turn down the spice meter and restore a semblance of order to our once-serene workplace?\n" + "\n" + "Awaiting your guidance,\n" + "\n" + "Charlie",
+        options: [
+          {
+            "optionText": "Introduce a spice-infused fortune-telling activity.",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Keep pursuing your spice keenness, Charlie, my child. Did you know that a certain combination of spices is able to cause Teleportation?",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Invite a spice expert to educate the office on various spices, their cultural significance, and how to use them in a balanced and enjoyable way",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Make them a Spice Charity Challenge. Your coworkers can engage in fundraising activities related to spice, with the proceeds going to a charitable cause",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "This spicy time is a great time to gather some spicy secrets. Start a Blackmail Extravaganza, create a newsletter with fake secrets about your coworkers! Make them regret!",
+            "outcomeStep": null
+          },
+          {
+            "optionText": "Organize a Harmonious Spice Blend Day! Let your coworkers come together to create unique spice blends that represent unity and diversity",
+            "outcomeStep": null
+          }
+        ]
+      },
     ]
   },
   {
