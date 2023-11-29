@@ -142,7 +142,7 @@ export const FollowersConfig: FollowerInfo[] = [
             "outcomeStep": null
           }
         ]
-      }
+      },
     ]
   },
   {
