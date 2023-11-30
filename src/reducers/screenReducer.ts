@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 export enum Screens {
+  Intro,
   Office,
   Desktop,
   FollowersList,
@@ -17,7 +18,7 @@ interface screenState {
 export const screenSlice = createSlice({
   name: 'screen',
   initialState: {
-    currentScreenId: Screens.Office,
+    currentScreenId: Screens.Intro,
   },
   reducers: {
     openDesktopScreen: (state: screenState) => {

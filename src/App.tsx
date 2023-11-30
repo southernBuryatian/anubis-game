@@ -8,15 +8,18 @@ import DesktopPage from './pages/Desktop/Desktop';
 import FollowersDialogues from './pages/FollowersDialogues/FollowersDialogues';
 import SpeechBalloon from './components/SpeechBaloon/SpeechBalloon';
 import GodsRating from './pages/GodsRating/GodsRating';
+import Intro from './pages/Intro/Intro';
 
 function App() {
   const currentFollowerId = useSelector((state: ReturnType<typeof store.getState>) => state.currentFollower.currentFollowerId);
   const currentScreen = useSelector((state: ReturnType<typeof store.getState>) => state.screen.currentScreenId);
 
-  const currentScriptLine = useSelector((state: ReturnType<typeof store.getState>) => state.dialogues.currentScriptLine);
+  const currentScriptLine = useSelector((state: ReturnType<typeof store.getState>) => state.dialogues);
 
   const renderScreen = (screen: Screens) => {
     switch(screen) {
+      case Screens.Intro:
+        return (<Intro/>)
       case Screens.Office:
         return (<OfficePage/>);
       case Screens.Desktop:
@@ -35,7 +38,7 @@ function App() {
 
   return (
     <>
-      {currentScriptLine && <SpeechBalloon text={currentScriptLine}/>}
+      {currentScriptLine.currentScriptLine && <SpeechBalloon text={currentScriptLine.currentScriptLine} avatar={currentScriptLine.speaker}/>}
       {renderScreen(currentScreen)}
     </>
   );
