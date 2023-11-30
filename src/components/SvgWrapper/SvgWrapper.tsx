@@ -1,21 +1,36 @@
 import React, { ReactNode } from 'react';
 
-const SvgWrapper = ({elementId, callback, children }: {
-  elementId: string,
-  callback: () => void,
+const SvgWrapper = ({interactiveElements, children }: {
+  interactiveElements: {
+    elementId: string,
+    callback: () => void
+  } [],
   children: ReactNode
 }) => {
 
   React.useEffect(() => {
 
-    const onClick = () => {
-      callback();
-    };
-    const clickableElement = document.getElementById(elementId);
-    clickableElement?.addEventListener("click", onClick);
+    interactiveElements.forEach((element) => {
+      const onClick = () => {
+        element.callback();
+      };
+      const clickableElement = document.getElementById(element.elementId);
+      clickableElement?.addEventListener("click", onClick);
 
-    return () => clickableElement?.removeEventListener("click", onClick);
-  }, [callback, elementId]);
+    });
+
+    return () => {
+      interactiveElements.forEach((element) => {
+        const clickableElement = document.getElementById(element.elementId);
+        const onClick = () => {
+          element.callback();
+        };
+        clickableElement?.removeEventListener("click", onClick)
+      });
+    }
+
+    }, [interactiveElements])
+
 
   return (
     <>
