@@ -7,24 +7,33 @@ import { Container, Header, Heading, IconButton, Modal, PixelIcon, Spacer, Text 
 import ComputerScreenPageWrapper from '../../components/ComputerScreenPageWrapper/ComputerScreenPageWrapper';
 import React from 'react';
 import store from '../../reducers/store';
+import { executeNextStep } from '../../reducers/answersReducer';
 
 function FollowersDialogues() {
   const dispatch = useDispatch();
-  const storylineStepId = useSelector((state: ReturnType<typeof store.getState>) => state.time).currentTimeBlock;
+  const currentTimeBlock = useSelector((state: ReturnType<typeof store.getState>) => state.time).currentTimeBlock;
   const answers = useSelector((state: ReturnType<typeof store.getState>) => state.storylines);
 
-  const content = FollowersConfig.map(
+  const followersADay = 5;
+
+  const content = FollowersConfig.slice(0, followersADay * currentTimeBlock + 1).map(
     (follower, index) => {
+
+      const followerStoryline = answers[index];
+
+      if (followerStoryline.nextStorylineStepId && followerStoryline.lastInteractionTimeBlock < currentTimeBlock) {
+        dispatch(executeNextStep(index));
+      }
+
       let imageSrc = null;
       try {
         imageSrc = require(`../../config/FollowersAvatars/${follower.name}.png`);
       } catch (e) {
         console.log(follower.name);
       }
+      const storylineStepId = answers[index].currentStorylineStepId;
 
-      return !follower.storyline[storylineStepId] ?
-      <></> :
-      <div
+      return <div
         key={index}
         onClick={ () =>
         {

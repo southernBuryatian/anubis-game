@@ -10,26 +10,25 @@ const SvgWrapper = ({interactiveElements, children }: {
 
   React.useEffect(() => {
 
-    interactiveElements.forEach((element) => {
-      const onClick = () => {
-        element.callback();
-      };
-      const clickableElement = document.getElementById(element.elementId);
-      clickableElement?.addEventListener("click", onClick);
+    const eventListeners: (() => void)[] = [];
 
+    interactiveElements.forEach((element, index) => {
+      eventListeners.push(() => {
+        element.callback();
+      });
+
+      const clickableElement = document.getElementById(element.elementId);
+      clickableElement?.addEventListener("click", eventListeners[index]);
     });
 
     return () => {
-      interactiveElements.forEach((element) => {
+      interactiveElements.forEach((element, index) => {
         const clickableElement = document.getElementById(element.elementId);
-        const onClick = () => {
-          element.callback();
-        };
-        clickableElement?.removeEventListener("click", onClick)
+        clickableElement?.removeEventListener("click", eventListeners[index])
       });
     }
 
-    }, [interactiveElements])
+    }, [])
 
 
   return (

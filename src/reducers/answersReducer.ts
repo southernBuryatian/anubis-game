@@ -1,10 +1,12 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { FollowersConfig } from '../config/followersConfig';
+import { useSelector } from 'react-redux';
 
 interface followerStorylineState {
   currentStorylineStepId: number,
   chosenOptions: { [storylineStepId: number]: number },
-  nextStorylineStepId: number | null
+  nextStorylineStepId: number | null,
+  lastInteractionTimeBlock: number,
 }
 
 interface storylinesState {
@@ -15,7 +17,8 @@ const initialState = FollowersConfig.map((): followerStorylineState => {
   return {
     currentStorylineStepId: 0,
     chosenOptions: {},
-    nextStorylineStepId: null
+    nextStorylineStepId: null,
+    lastInteractionTimeBlock: 0,
   }
 } )
 
@@ -24,6 +27,7 @@ interface answerPayload {
   storylineStepId: number,
   chosenOption: number,
   nextStep?: number | null,
+  timeBlock: number,
 }
 
 export const storylinesSlice = createSlice({
@@ -35,6 +39,7 @@ export const storylinesSlice = createSlice({
       state[answer.followerIndex].chosenOptions[answer.storylineStepId] = action.payload.chosenOption;
       if (action.payload.nextStep) {
         state[answer.followerIndex].nextStorylineStepId = action.payload.nextStep;
+        state[answer.followerIndex].lastInteractionTimeBlock = action.payload.timeBlock
       }
     },
     executeNextStep: (state: storylinesState, action: PayloadAction<number>) => {

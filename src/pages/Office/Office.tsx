@@ -2,7 +2,6 @@ import { ReactComponent as OfficeImage } from './office.svg';
 import SvgWrapper from '../../components/SvgWrapper/SvgWrapper';
 import { openDesktopScreen } from '../../reducers/screenReducer';
 import { useDispatch } from 'react-redux';
-import { Button } from 'nes-ui-react';
 import { GodsCharacters, openScriptLine } from '../../reducers/dialogueReducer';
 import { switchTimeBlock } from '../../reducers/timeReducer';
 
@@ -30,8 +29,8 @@ function OfficePage () {
         {
           elementId: clockElementId,
           callback: () => {
-            dispatch(openScriptLine({text: "I wonder, who decided on this clock design.", speaker: GodsCharacters.Anubis}));
             dispatch(switchTimeBlock());
+            dispatch(openScriptLine({text: "I wonder, who decided on this clock design.", speaker: GodsCharacters.Anubis}));
           }
         },
         {

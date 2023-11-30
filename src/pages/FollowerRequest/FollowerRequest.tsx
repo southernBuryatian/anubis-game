@@ -3,7 +3,7 @@ import './FollowerRequest.css';
 import { Button, Toast, Text, Menu, Modal, Spacer, Header, Heading, IconButton, PixelIcon, ModalContent } from "nes-ui-react";
 import { FollowersConfig } from '../../config/followersConfig';
 import { useDispatch, useSelector } from 'react-redux';
-import { chooseAnswer, executeNextStep } from '../../reducers/answersReducer';
+import { chooseAnswer } from '../../reducers/answersReducer';
 import { openFollowersDialogues } from '../../reducers/screenReducer';
 import store from '../../reducers/store';
 import ComputerScreenPageWrapper from '../../components/ComputerScreenPageWrapper/ComputerScreenPageWrapper';
@@ -14,16 +14,13 @@ function FollowerRequest( { followerIndex }: { followerIndex: number } ) {
 
   const followerConfig = FollowersConfig[followerIndex];
 
-  // todo: take day from config somewhere
-  const storylineStepId = useSelector((state: ReturnType<typeof store.getState>) => state.time).currentTimeBlock;
+  const currentTimeBlock = useSelector((state: ReturnType<typeof store.getState>) => state.time).currentTimeBlock;
+  const storylines = useSelector((state: ReturnType<typeof store.getState>) => state.storylines);
+
+  const storylineStepId = storylines[followerIndex].currentStorylineStepId;
   const followerRequest = followerConfig.storyline[storylineStepId];
 
-  const storylines = useSelector((state: ReturnType<typeof store.getState>) => state.storylines);
   const followerStoryline = storylines[followerIndex];
-
-  if (followerStoryline.nextStorylineStepId === storylineStepId) {
-    dispatch(executeNextStep(followerIndex));
-  }
 
   let imageSrc = null;
   try {
@@ -81,7 +78,8 @@ function FollowerRequest( { followerIndex }: { followerIndex: number } ) {
                             followerIndex,
                             storylineStepId,
                             chosenOption: index,
-                            nextStep: option.outcomeStep
+                            nextStep: option.outcomeStep,
+                            timeBlock: currentTimeBlock,
                           }))
                         } catch (err) {
                           console.log(err);
