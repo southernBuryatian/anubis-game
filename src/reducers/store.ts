@@ -5,6 +5,7 @@ import answersReducer from './answersReducer';
 import dialogueReducer from './dialogueReducer';
 import timeReducer from './timeReducer';
 import providenceReducer from './providenceReducer';
+import officeReducer from './officeReducer';
 
 export default configureStore({
   reducer: {
@@ -14,5 +15,6 @@ export default configureStore({
     dialogues: dialogueReducer,
     time: timeReducer,
     providence: providenceReducer,
+    office: officeReducer,
   },
 })

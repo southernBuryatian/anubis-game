@@ -33,7 +33,7 @@ const SvgWrapper = ({interactiveElements, children }: {
       });
     }
 
-    }, [])
+    }, [children])
 
 
   return (
