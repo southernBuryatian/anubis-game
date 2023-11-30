@@ -4,6 +4,7 @@ import screenReducer from './screenReducer';
 import answersReducer from './answersReducer';
 import dialogueReducer from './dialogueReducer';
 import timeReducer from './timeReducer';
+import providenceReducer from './providenceReducer';
 
 export default configureStore({
   reducer: {
@@ -12,5 +13,6 @@ export default configureStore({
     storylines: answersReducer,
     dialogues: dialogueReducer,
     time: timeReducer,
+    providence: providenceReducer,
   },
 })

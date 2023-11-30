@@ -1,6 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { FollowersConfig } from '../config/followersConfig';
-import { useSelector } from 'react-redux';
 
 interface followerStorylineState {
   currentStorylineStepId: number,

@@ -3,7 +3,8 @@ import React, { ReactNode } from 'react';
 const SvgWrapper = ({interactiveElements, children }: {
   interactiveElements: {
     elementId: string,
-    callback: () => void
+    callback: () => void,
+    eventType?: keyof HTMLElementEventMap,
   } [],
   children: ReactNode
 }) => {
@@ -17,14 +18,18 @@ const SvgWrapper = ({interactiveElements, children }: {
         element.callback();
       });
 
+      const event = element.eventType ? element.eventType : "click";
+
       const clickableElement = document.getElementById(element.elementId);
-      clickableElement?.addEventListener("click", eventListeners[index]);
+      clickableElement?.addEventListener(event, eventListeners[index]);
     });
 
     return () => {
       interactiveElements.forEach((element, index) => {
+        const event = element.eventType ? element.eventType : "click";
+
         const clickableElement = document.getElementById(element.elementId);
-        clickableElement?.removeEventListener("click", eventListeners[index])
+        clickableElement?.removeEventListener(event, eventListeners[index])
       });
     }
 

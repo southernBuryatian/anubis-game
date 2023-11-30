@@ -1,6 +1,8 @@
 interface replyOption {
   optionText: string,
-  outcomeStep: number | null
+  outcomeStep: number | null,
+  followers?: number,
+  providenceMultiplier?: number,
 }
 
 interface storylineStep {
@@ -25,8 +27,10 @@ export const FollowersConfig: FollowerInfo[] = [
             "outcomeStep": 1
           },
           {
-            "optionText": "Hey Eugene, why not form a study group with fellow history enthusiasts? Collective preparation not only eases the burden but also builds a supportive community. Together, you'll conquer the Papyrology test!",
-            outcomeStep: 1
+            optionText: "Hey Eugene, why not form a study group with fellow history enthusiasts? Collective preparation not only eases the burden but also builds a supportive community. Together, you'll conquer the Papyrology test!",
+            outcomeStep: 1,
+            followers: 6,
+            providenceMultiplier: 1,
           },
           {
             "optionText": "Eugene, you're not just a student; you're the Keeper of Ancient Wisdom. Passing the test is crucial for maintaining cosmic balance and preserving the knowledge of the ages. Rise to the occasion.",

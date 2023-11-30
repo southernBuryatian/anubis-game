@@ -1,12 +1,13 @@
 import React from 'react';
 import './FollowerRequest.css';
-import { Button, Toast, Text, Menu, Modal, Spacer, Header, Heading, IconButton, PixelIcon, ModalContent } from "nes-ui-react";
+import { Button, Toast, Text, Menu, Modal, Spacer, Header, Heading, IconButton, PixelIcon, ModalContent, Badge } from "nes-ui-react";
 import { FollowersConfig } from '../../config/followersConfig';
 import { useDispatch, useSelector } from 'react-redux';
 import { chooseAnswer } from '../../reducers/answersReducer';
 import { openFollowersDialogues } from '../../reducers/screenReducer';
 import store from '../../reducers/store';
 import ComputerScreenPageWrapper from '../../components/ComputerScreenPageWrapper/ComputerScreenPageWrapper';
+import { changeFollowersAmount, changeProvidenceAmount, standardProvidence } from '../../reducers/providenceReducer';
 
 function FollowerRequest( { followerIndex }: { followerIndex: number } ) {
 
@@ -28,6 +29,11 @@ function FollowerRequest( { followerIndex }: { followerIndex: number } ) {
   } catch (e) {
     console.log(followerConfig.name);
   }
+
+  const chosenOption =
+    typeof followerStoryline.chosenOptions[storylineStepId] === 'number'
+      ? followerRequest.options[followerStoryline.chosenOptions[storylineStepId]]
+      : null;
 
   // todo: iterate storyline to display all that available
 
@@ -55,13 +61,31 @@ function FollowerRequest( { followerIndex }: { followerIndex: number } ) {
 
           {(
             followerStoryline.currentStorylineStepId === storylineStepId
-            && typeof followerStoryline.chosenOptions[storylineStepId] === 'number'
+            && chosenOption
           ) ?
+            <>
               <Toast style={{ float: 'right' }} bubblePostion='right'>
                 <Text>
-                  {followerRequest.options[followerStoryline.chosenOptions[storylineStepId]].optionText}
+                  {chosenOption.optionText}
                 </Text>
               </Toast>
+            {
+              chosenOption.followers
+              &&
+              <Badge
+                backgroundColor={'error'}
+                text={`${followerRequest.options[followerStoryline.chosenOptions[storylineStepId]].followers} followers`}
+              />
+            }
+            {
+              typeof chosenOption.providenceMultiplier === 'number'
+              &&
+              <Badge
+                backgroundColor={'error'}
+                text={`${standardProvidence} providence`}
+              />
+            }
+              </>
 
               :
 
@@ -80,7 +104,11 @@ function FollowerRequest( { followerIndex }: { followerIndex: number } ) {
                             chosenOption: index,
                             nextStep: option.outcomeStep,
                             timeBlock: currentTimeBlock,
-                          }))
+                          }));
+                          const followers = option.followers ? option.followers : 0;
+                          dispatch(changeFollowersAmount(followers));
+                          const providencyMltp = option.providenceMultiplier ? option.providenceMultiplier : 0;
+                          dispatch(changeProvidenceAmount(providencyMltp));
                         } catch (err) {
                           console.log(err);
                         }
