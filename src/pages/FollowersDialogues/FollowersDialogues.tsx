@@ -2,12 +2,12 @@ import './FollowersDialogues.css';
 import { FollowersConfig } from '../../config/followersConfig';
 import { useDispatch, useSelector } from 'react-redux';
 import { chooseFollower } from '../../reducers/followerReducer';
-import { openDesktopScreen, openFollowerWindow } from '../../reducers/screenReducer';
-import { Container, Header, Heading, IconButton, Modal, PixelIcon, Spacer, Text } from 'nes-ui-react';
-import ComputerScreenPageWrapper from '../../components/ComputerScreenPageWrapper/ComputerScreenPageWrapper';
+import { openFollowerWindow } from '../../reducers/screenReducer';
+import { Container, Text } from 'nes-ui-react';
 import React from 'react';
 import store from '../../reducers/store';
 import { executeNextStep } from '../../reducers/answersReducer';
+import ComputerAppWrapper from '../../components/ComputerAppWrapper/ComputerAppWrapper';
 
 function FollowersDialogues() {
   const dispatch = useDispatch();
@@ -66,21 +66,9 @@ function FollowersDialogues() {
     }
     );
     return (
-      <ComputerScreenPageWrapper>
-        <Modal open={true} backdrop={false}>
-          <Header>
-            <Spacer />
-            <Heading dense></Heading>
-            <Spacer />
-            <IconButton color="error" size="small" onClick={() => {
-              dispatch(openDesktopScreen())
-            }}>
-              <PixelIcon name="pixelicon-close" size='small' />
-            </IconButton>
-          </Header>
-          { content }
-        </Modal>
-      </ComputerScreenPageWrapper>
+      <ComputerAppWrapper>
+        { content }
+      </ComputerAppWrapper>
     )
 }
 

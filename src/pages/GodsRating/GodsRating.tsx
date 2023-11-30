@@ -1,27 +1,45 @@
-import { useDispatch } from 'react-redux';
-import { openDesktopScreen } from '../../reducers/screenReducer';
-import { Header, Heading, IconButton, Modal, PixelIcon, Spacer } from 'nes-ui-react';
-import ComputerScreenPageWrapper from '../../components/ComputerScreenPageWrapper/ComputerScreenPageWrapper';
+import { useSelector } from 'react-redux';
 import React from 'react';
+import ComputerAppWrapper from '../../components/ComputerAppWrapper/ComputerAppWrapper';
+import { GodsRatingConfig } from '../../config/godsRatingConfig';
+import store from '../../reducers/store';
+import { Container, Text } from 'nes-ui-react';
 
 function GodsRating() {
-  const dispatch = useDispatch();
+  const currentTimeBlock = useSelector((state: ReturnType<typeof store.getState>) => state.time).currentTimeBlock;
+
+  const providence = useSelector((state: ReturnType<typeof store.getState>) => state.providence).providenceAmount;
+  const AnubisRatingDummy = [];
+  // dirty, but works flawlessly and avoids inserting into a sorted array
+  for (let i = 0; i <= currentTimeBlock; i++) {
+    AnubisRatingDummy.push(providence);
+  }
+  const todayRating = [...GodsRatingConfig, {name: 'Anubis', rating: AnubisRatingDummy}];
+  todayRating.sort((a, b) => Math.max(b.rating[currentTimeBlock]) - Math.max(a.rating[currentTimeBlock]));
+
+  const content = todayRating.map((god) => {
+    return (
+      <div
+        key={god.name}>
+        <Container
+          title={god.name}
+          alignTitle="center"
+          style={{backgroundColor: 'cornflowerblue'}}
+        >
+          <Text
+            size='xlarge'
+            centered={true}
+          >
+            {god.rating[currentTimeBlock]}
+          </Text>
+        </Container>
+     </div>)
+  });
 
   return (
-    <ComputerScreenPageWrapper>
-      <Modal open={true} backdrop={false}>
-        <Header>
-          <Spacer />
-          <Heading dense></Heading>
-          <Spacer />
-          <IconButton color="error" size="small" onClick={() => {
-            dispatch(openDesktopScreen())
-          }}>
-            <PixelIcon name="pixelicon-close" size='small' />
-          </IconButton>
-        </Header>
-      </Modal>
-    </ComputerScreenPageWrapper>
+    <ComputerAppWrapper>
+      { content }
+    </ComputerAppWrapper>
   )
 }
 

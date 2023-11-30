@@ -8,6 +8,7 @@ import { openFollowersDialogues } from '../../reducers/screenReducer';
 import store from '../../reducers/store';
 import ComputerScreenPageWrapper from '../../components/ComputerScreenPageWrapper/ComputerScreenPageWrapper';
 import { changeFollowersAmount, changeProvidenceAmount, standardProvidence } from '../../reducers/providenceReducer';
+import ComputerAppWrapper from '../../components/ComputerAppWrapper/ComputerAppWrapper';
 
 function FollowerRequest( { followerIndex }: { followerIndex: number } ) {
 
@@ -38,37 +39,27 @@ function FollowerRequest( { followerIndex }: { followerIndex: number } ) {
   // todo: iterate storyline to display all that available
 
   return (
-    <ComputerScreenPageWrapper>
-      <Modal open={true} backdrop={false}>
-        <Header>
-          <Spacer />
-          <Heading dense></Heading>
-          <Spacer />
-          <IconButton color="error" size="small" onClick={() => {dispatch(openFollowersDialogues())}}>
-            <PixelIcon name="pixelicon-close" size='small' />
-          </IconButton>
-        </Header>
+    <ComputerAppWrapper>
+      <ModalContent className='ModalContent'>
+        {imageSrc && <img src={imageSrc} className="FollowerAvatar" alt={followerConfig.name} />}
 
-        <ModalContent className='ModalContent'>
-          {imageSrc && <img src={imageSrc} className="FollowerAvatar" alt={followerConfig.name} />}
+        <Text size={'xlarge'} color='white'> {followerConfig.name} </Text>
+        <Toast style={{ float: 'left' }} bubblePostion='left'>
+          <Text>
+            {followerRequest.requestText}
+          </Text>
+        </Toast>
 
-          <Text size={'xlarge'} color='white'> {followerConfig.name} </Text>
-          <Toast style={{ float: 'left' }} bubblePostion='left'>
-            <Text>
-              {followerRequest.requestText}
-            </Text>
-          </Toast>
-
-          {(
-            followerStoryline.currentStorylineStepId === storylineStepId
-            && chosenOption
-          ) ?
-            <>
-              <Toast style={{ float: 'right' }} bubblePostion='right'>
-                <Text>
-                  {chosenOption.optionText}
-                </Text>
-              </Toast>
+        {(
+          followerStoryline.currentStorylineStepId === storylineStepId
+          && chosenOption
+        ) ?
+          <>
+            <Toast style={{ float: 'right' }} bubblePostion='right'>
+              <Text>
+                {chosenOption.optionText}
+              </Text>
+            </Toast>
             {
               chosenOption.followers
               &&
@@ -85,44 +76,43 @@ function FollowerRequest( { followerIndex }: { followerIndex: number } ) {
                 text={`${standardProvidence} providence`}
               />
             }
-              </>
+          </>
 
-              :
+          :
 
-              <Menu>
-                {followerRequest.options.map((option, index) => {
-                  return (
-                    <Button
-                      style={{ flexBasis: '50%'}}
-                      key={index.toString()}
-                      color={index % 2 === 0 ? "warning" : undefined}
-                      onClick={async () => {
-                        try {
-                          dispatch(chooseAnswer({
-                            followerIndex,
-                            storylineStepId,
-                            chosenOption: index,
-                            nextStep: option.outcomeStep,
-                            timeBlock: currentTimeBlock,
-                          }));
-                          const followers = option.followers ? option.followers : 0;
-                          dispatch(changeFollowersAmount(followers));
-                          const providencyMltp = option.providenceMultiplier ? option.providenceMultiplier : 0;
-                          dispatch(changeProvidenceAmount(providencyMltp));
-                        } catch (err) {
-                          console.log(err);
-                        }
-                      }}>
-                      { option.optionText }
-                    </Button>
-                  )
-                })}
-              </Menu>
-          }
+          <Menu>
+            {followerRequest.options.map((option, index) => {
+              return (
+                <Button
+                  style={{ flexBasis: '50%'}}
+                  key={index.toString()}
+                  color={index % 2 === 0 ? "warning" : undefined}
+                  onClick={async () => {
+                    try {
+                      dispatch(chooseAnswer({
+                        followerIndex,
+                        storylineStepId,
+                        chosenOption: index,
+                        nextStep: option.outcomeStep,
+                        timeBlock: currentTimeBlock,
+                      }));
+                      const followers = option.followers ? option.followers : 0;
+                      dispatch(changeFollowersAmount(followers));
+                      const providencyMltp = option.providenceMultiplier ? option.providenceMultiplier : 0;
+                      dispatch(changeProvidenceAmount(providencyMltp));
+                    } catch (err) {
+                      console.log(err);
+                    }
+                  }}>
+                  { option.optionText }
+                </Button>
+              )
+            })}
+          </Menu>
+        }
 
-        </ModalContent>
-      </Modal>
-    </ComputerScreenPageWrapper>
+      </ModalContent>
+    </ComputerAppWrapper>
   );
 }
 

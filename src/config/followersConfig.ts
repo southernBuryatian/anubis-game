@@ -124,27 +124,39 @@ export const FollowersConfig: FollowerInfo[] = [
         options: [
           {
             optionText: "Repair the damaged garden gnome",
-            outcomeStep: null
+            outcomeStep: null,
+            followers: 1,
+            providenceMultiplier: 3.5
           },
           {
             optionText: "Create a unique sculpture for the neighbor as a gesture of goodwill",
-            outcomeStep: null
+            outcomeStep: null,
+            followers: 2,
+            providenceMultiplier: 0.5
           },
           {
             optionText: "Collaborate with the neighbor on a joint art project",
-            outcomeStep: null
+            outcomeStep: null,
+            followers: 4,
+            providenceMultiplier: 0.5
           },
           {
             optionText: "Suggest turning all their garden gnomes into abstract art to create a trend",
-            outcomeStep: null
+            outcomeStep: null,
+            followers: 10,
+            providenceMultiplier: 0
           },
           {
             optionText: "Sculpt a pineapple instead of a gnome as a symbol of a new era in garden art",
-            outcomeStep: null
+            outcomeStep: null,
+            followers: 15,
+            providenceMultiplier: 0
           },
           {
             optionText: "Turn the damaged gnome into a performance art piece",
-            outcomeStep: null
+            outcomeStep: null,
+            followers: 15,
+            providenceMultiplier: 0
           },
         ]
       }
@@ -158,27 +170,39 @@ export const FollowersConfig: FollowerInfo[] = [
         "options": [
           {
             "optionText": "You should apologize about this challenge, my friend.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 2,
+            providenceMultiplier: 3.5
           },
           {
             "optionText": "Showcase your strength through achievements at work instead.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 2,
+            providenceMultiplier: 2.5
           },
           {
             "optionText": "What? You better talk honestly to her about your feelings!",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 5,
+            providenceMultiplier: 3.5
           },
           {
             "optionText": "Challenge everyone in the office to arm-wrestling matches to assert dominance.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 100,
+            providenceMultiplier: 0
           },
           {
             "optionText": "Start a rumor that arm-wrestling prowess is directly linked to job performance.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 200,
+            providenceMultiplier: 0
           },
           {
             "optionText": "Solve workplace conflicts with thumb wrestling matches.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 20,
+            providenceMultiplier: 0
           }
         ]
       }
@@ -192,27 +216,39 @@ export const FollowersConfig: FollowerInfo[] = [
         "options": [
           {
             "optionText": "Apologize and offer to organize a milder potluck next time.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 2,
+            providenceMultiplier: 3.5
           },
           {
             "optionText": "Host a spice-tasting event to showcase different flavors.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 29,
+            providenceMultiplier: 2.5
           },
           {
             "optionText": "Share recipes for a variety of dishes with coworkers.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 10,
+            providenceMultiplier: 1.5
           },
           {
             "optionText": "Infuse all future dishes with even more spice to assert dominance.",
-            "outcomeStep": 1
+            "outcomeStep": 1,
+            followers: 12,
+            providenceMultiplier: 0
           },
           {
             "optionText": "Declare yourself the 'Spice King' and demand tribute from coworkers.",
-            "outcomeStep": 1
+            "outcomeStep": 1,
+            followers: 20,
+            providenceMultiplier: 0
           },
           {
             "optionText": "Organize a hot sauce taste-testing event during an important meeting.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 5,
+            providenceMultiplier: 0
           }
         ]
       },
@@ -221,27 +257,39 @@ export const FollowersConfig: FollowerInfo[] = [
         options: [
           {
             "optionText": "Introduce a spice-infused fortune-telling activity.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 100,
+            providenceMultiplier: 0.5
           },
           {
             "optionText": "Keep pursuing your spice keenness, Charlie, my child. Did you know that a certain combination of spices is able to cause Teleportation?",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 20,
+            providenceMultiplier: 0.5
           },
           {
             "optionText": "Invite a spice expert to educate the office on various spices, their cultural significance, and how to use them in a balanced and enjoyable way",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 2,
+            providenceMultiplier: 3.5
           },
           {
             "optionText": "Make them a Spice Charity Challenge. Your coworkers can engage in fundraising activities related to spice, with the proceeds going to a charitable cause",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 15,
+            providenceMultiplier: 3.5
           },
           {
             "optionText": "This spicy time is a great time to gather some spicy secrets. Start a Blackmail Extravaganza, create a newsletter with fake secrets about your coworkers! Make them regret!",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 200,
+            providenceMultiplier: 0
           },
           {
             "optionText": "Organize a Harmonious Spice Blend Day! Let your coworkers come together to create unique spice blends that represent unity and diversity",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 100,
+            providenceMultiplier: 2.5
           }
         ]
       },
@@ -255,27 +303,39 @@ export const FollowersConfig: FollowerInfo[] = [
         "options": [
           {
             "optionText": "Politely talk to the coworker about personal space.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 2,
+            providenceMultiplier: 3.5
           },
           {
             "optionText": "Suggest a team-building activity to redirect attention.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 2,
+            providenceMultiplier: 0.5
           },
           {
             "optionText": "Share a funny story to lighten the atmosphere.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 10,
+            providenceMultiplier: 0.5
           },
           {
             "optionText": "Hug every coworker to establish a new level of camaraderie.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 20,
+            providenceMultiplier: 0.5
           },
           {
             "optionText": "Start a 'Talk to a Tree' therapy session for the office.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 1,
+            providenceMultiplier: 2.5
           },
           {
             "optionText": "Encourage more hugs to improve workplace morale.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 20,
+            providenceMultiplier: 0
           }
         ]
       }
@@ -289,27 +349,39 @@ export const FollowersConfig: FollowerInfo[] = [
         "options": [
           {
             "optionText": "Organize guided garden tours at scheduled times.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 20,
+            providenceMultiplier: 0
           },
           {
             "optionText": "Propose creating a community garden to share the beauty.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 20,
+            providenceMultiplier: 1.5
           },
           {
             "optionText": "Install discreet signs requesting respectful viewing.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 10,
+            providenceMultiplier: 0.5
           },
           {
             "optionText": "Install a toll booth for garden tours to generate income.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 2000,
+            providenceMultiplier: 0
           },
           {
             "optionText": "Start a reality TV show about the secret lives of plants.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 2000,
+            providenceMultiplier: 0
           },
           {
             "optionText": "Hire garden gnomes as security to manage tourist crowds.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 3000,
+            providenceMultiplier: 0.5
           }
         ]
       }
@@ -323,27 +395,39 @@ export const FollowersConfig: FollowerInfo[] = [
         "options": [
           {
             "optionText": "Focus on presenting solutions to avoid failure.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 2,
+            providenceMultiplier: 5.5
           },
           {
             "optionText": "Collaborate with the team to address concerns.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 2,
+            providenceMultiplier: 5.5
           },
           {
             "optionText": "Share positive aspects of the project to boost morale.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 200,
+            providenceMultiplier: 0.5
           },
           {
             "optionText": "Predict random and absurd events to keep the office on its toes.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 200,
+            providenceMultiplier: 0
           },
           {
             "optionText": "Replace all business meetings with magic eight-ball consultations.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 1000,
+            providenceMultiplier: 0.5
           },
           {
             "optionText": "Predict success in everything, regardless of the actual situation.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 1000,
+            providenceMultiplier: 0
           }
         ]
       }
@@ -357,27 +441,39 @@ export const FollowersConfig: FollowerInfo[] = [
         "options": [
           {
             "optionText": "Create a new jingle that's more subtle.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 2,
+            providenceMultiplier: 0.5
           },
           {
             "optionText": "Apologize and offer a different advertising approach.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 1,
+            providenceMultiplier: 0.5
           },
           {
             "optionText": "Turn the jingle into a positive marketing campaign.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 1000,
+            providenceMultiplier: 3.5
           },
           {
             "optionText": "Compose a jingle that includes subliminal messages to control minds.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 2000,
+            providenceMultiplier: 3.5
           },
           {
             "optionText": "Start a musical flash mob at inconvenient times to boost spirits.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 200,
+            providenceMultiplier: 0
           },
           {
             "optionText": "Replace all elevator music with your catchy jingle.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 8000,
+            providenceMultiplier: 0
           }
         ]
       }
@@ -391,27 +487,39 @@ export const FollowersConfig: FollowerInfo[] = [
         "options": [
           {
             "optionText": "Stop selling eggs with fortunes attached.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 2,
+            providenceMultiplier: 0.5
           },
           {
             "optionText": "Offer a disclaimer about the fortune-telling aspect.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 2,
+            providenceMultiplier: 2.5
           },
           {
             "optionText": "Create a separate line for regular farm products.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 50,
+            providenceMultiplier: 0.5
           },
           {
             "optionText": "Attach fake fortunes to eggs, predicting outlandish events.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 1000,
+            providenceMultiplier: 0
           },
           {
             "optionText": "Convince people that eating farm-fresh eggs will grant superpowers.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 1000,
+            providenceMultiplier: 0
           },
           {
             "optionText": "Start a rumor that the eggs are actually secret government spies.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 15000,
+            providenceMultiplier: 0
           }
         ]
       }
@@ -425,27 +533,39 @@ export const FollowersConfig: FollowerInfo[] = [
         "options": [
           {
             "optionText": "Politely educate people about personal space.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 2,
+            providenceMultiplier: 10.5
           },
           {
             "optionText": "Trim the beard for practicality while maintaining style.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 100,
+            providenceMultiplier: 3.5
           },
           {
             "optionText": "Share amusing beard-related stories to connect with people.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 500,
+            providenceMultiplier: 4.5
           },
           {
             "optionText": "Offer beard-touching sessions for a fee.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 1000,
+            providenceMultiplier: 0.5
           },
           {
             "optionText": "Host a 'Beard Olympics' to showcase the versatility of facial hair.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 200,
+            providenceMultiplier: 0.5
           },
           {
             "optionText": "Convince everyone that beard grooming is the key to success.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 2000,
+            providenceMultiplier: 0
           }
         ]
       }
@@ -459,27 +579,39 @@ export const FollowersConfig: FollowerInfo[] = [
         "options": [
           {
             "optionText": "Organize a community painting day to correct the mural.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 2,
+            providenceMultiplier: 0.5
           },
           {
             "optionText": "Add explanatory signage to the mural.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 2,
+            providenceMultiplier: 0.5
           },
           {
             "optionText": "Collaborate with other artists for a mural makeover.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 20,
+            providenceMultiplier: 0.5
           },
           {
             "optionText": "Paint all future murals in invisible ink for a mysterious vibe.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 2000,
+            providenceMultiplier: 0.5
           },
           {
             "optionText": "Declare the mural a social experiment to test observational skills.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 210,
+            providenceMultiplier: 0.5
           },
           {
             "optionText": "Create an art movement based on confusing and ambiguous murals.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 250,
+            providenceMultiplier: 0
           }
         ]
       }
@@ -493,15 +625,21 @@ export const FollowersConfig: FollowerInfo[] = [
         "options": [
           {
             "optionText": "Apologize to the participants, offer a free yoga session as compensation, and incorporate more mindful movement into future outdoor sessions.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 2,
+            providenceMultiplier: 10.5
           },
           {
             "optionText": "Host a special 'Mindful Movement in Nature' event to teach participants how to blend yoga with the serenity of the outdoors.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 2000,
+            providenceMultiplier: 2.5
           },
           {
             "optionText": "Declare that unexpected mud baths are a new trend in wellness and encourage participants to embrace the unplanned spa experience.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 20000,
+            providenceMultiplier: 0.5
           }
         ]
       }
@@ -515,15 +653,21 @@ export const FollowersConfig: FollowerInfo[] = [
         "options": [
           {
             "optionText": "Organize a community-wide search for the lost dinosaur costume.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 25,
+            providenceMultiplier: 0.5
           },
           {
             "optionText": "Host a 'Dino Discovery Day' where community members can showcase dinosaur-themed creations.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 50,
+            providenceMultiplier: 1.5
           },
           {
             "optionText": "Claim that the missing dinosaur costume is on a secret mission to protect the neighborhood.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 3000,
+            providenceMultiplier: 0
           }
         ]
       }
@@ -537,15 +681,21 @@ export const FollowersConfig: FollowerInfo[] = [
         "options": [
           {
             "optionText": "Apologize sincerely for the mistake, offer a free styling session, and implement additional measures to prevent future errors.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 2,
+            providenceMultiplier: 10.5
           },
           {
             "optionText": "Host a 'Hair Appreciation Day' to celebrate the uniqueness of different hairstyles.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 400,
+            providenceMultiplier: 3.5
           },
           {
             "optionText": "Declare the accidental mullet as the latest trend in cutting-edge hairstyles.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 2000,
+            providenceMultiplier: 0.5
           }
         ]
       }
@@ -559,15 +709,21 @@ export const FollowersConfig: FollowerInfo[] = [
         "options": [
           {
             "optionText": "Apologize for the prank, ensure your coworker feels comfortable, and organize an 'Office Harmony Day.'",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 2,
+            providenceMultiplier: 10.5
           },
           {
             "optionText": "Propose a 'Prank-Free Zone' policy in the office.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 20,
+            providenceMultiplier: 3.5
           },
           {
             "optionText": "Convince your coworker that the balloon prank was a team-building exercise.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 200,
+            providenceMultiplier: 0.5
           }
         ]
       }
@@ -581,27 +737,39 @@ export const FollowersConfig: FollowerInfo[] = [
         "options": [
           {
             "optionText": "Apologize to your customers, explain the mix-up, and offer a discount for their next purchase.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 2,
+            providenceMultiplier: 8.5
           },
           {
             "optionText": "Organize a 'Free Ice Cream Day' to turn the mix-up into a community event.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 289,
+            providenceMultiplier: 0.5
           },
           {
             "optionText": "Share a variety of ice cream recipes with your customers as a gesture of goodwill.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 255,
+            providenceMultiplier: 1.5
           },
           {
             "optionText": "Declare yourself the 'Generous Ice Cream Giver' and continue giving away free ice cream.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 20000,
+            providenceMultiplier: 0
           },
           {
             "optionText": "Convince your customers that it's a special promotion and encourage them to enjoy the unexpected treat.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 200,
+            providenceMultiplier: 0.5
           },
           {
             "optionText": "Host an impromptu ice cream party in the neighborhood to celebrate the mix-up.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 300,
+            providenceMultiplier: 0.5
           }
         ]
       }
@@ -615,15 +783,21 @@ export const FollowersConfig: FollowerInfo[] = [
         "options": [
           {
             "optionText": "Apologize for the masterpiece and organize a 'Pancake Painting Party.'",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 2,
+            providenceMultiplier: 7.5
           },
           {
             "optionText": "Collaborate with local chefs to organize a 'Culinary Canvas' event.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 100,
+            providenceMultiplier: 2.5
           },
           {
             "optionText": "Declare the pancake masterpiece as a symbol of breakfast rebellion.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 1000,
+            providenceMultiplier: 0
           }
         ]
       }
@@ -637,15 +811,21 @@ export const FollowersConfig: FollowerInfo[] = [
         "options": [
           {
             "optionText": "Apologize for the unexpected performance and offer to organize a magical garden party.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 2,
+            providenceMultiplier: 5.5
           },
           {
             "optionText": "Collaborate with local musicians to organize a diverse musical event.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 500,
+            providenceMultiplier: 3.5
           },
           {
             "optionText": "Convince the community that the ostrich has a divine singing talent.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 1000,
+            providenceMultiplier: 0
           }
         ]
       }
@@ -659,15 +839,21 @@ export const FollowersConfig: FollowerInfo[] = [
         "options": [
           {
             "optionText": "Apologize for the disruption and organize a 'Giggles for Good' charity event.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 20,
+            providenceMultiplier: 0
           },
           {
             "optionText": "Initiate a 'Laughter Integration' initiative at the workplace.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 20,
+            providenceMultiplier: 0
           },
           {
             "optionText": "Declare the laughter disruption as an intentional stress-relief experiment.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 20,
+            providenceMultiplier: 4.5
           }
         ]
       }
@@ -681,15 +867,21 @@ export const FollowersConfig: FollowerInfo[] = [
         "options": [
           {
             "optionText": "Apologize for the unexpected display and offer to organize a 'Quantum Quilt Quest.'",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 100,
+            providenceMultiplier: 3.5
           },
           {
             "optionText": "Collaborate with the community to create a quilt representing various perspectives.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 40,
+            providenceMultiplier: 2.5
           },
           {
             "optionText": "Convince the community that the quilt is a window to alternate dimensions.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 1000,
+            providenceMultiplier: 0
           }
         ]
       }
@@ -703,15 +895,21 @@ export const FollowersConfig: FollowerInfo[] = [
         "options": [
           {
             "optionText": "Acknowledge the break in silence, apologize, and organize a 'Silent Apology Mime Show.'",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 2,
+            providenceMultiplier: 3.5
           },
           {
             "optionText": "Incorporate the noise into the performance and host a 'Dynamic Mime Night.'",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 1000,
+            providenceMultiplier: 4.5
           },
           {
             "optionText": "Declare the break as a deliberate artistic choice and suggest a 'Spontaneous Laughter Hour.'",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 200,
+            providenceMultiplier: 1.5
           }
         ]
       }
@@ -725,15 +923,21 @@ export const FollowersConfig: FollowerInfo[] = [
         "options": [
           {
             "optionText": "Apologize for the pumpkin mishap, offer to help repair the damaged tomatoes, and organize a 'Harvest Harmony' event.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 9,
+            providenceMultiplier: 4.5
           },
           {
             "optionText": "Collaborate with the neighbor on a joint garden project celebrating diverse crops.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 2,
+            providenceMultiplier: 2.5
           },
           {
             "optionText": "Declare the mishap as a culinary experiment and propose a 'Pumpkin-Tomato Fusion Feast.'",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 90,
+            providenceMultiplier: 0.5
           }
         ]
       }
@@ -747,15 +951,21 @@ export const FollowersConfig: FollowerInfo[] = [
         "options": [
           {
             "optionText": "Apologize for the inaccurate forecast, offer insights into weather prediction challenges, and organize a community meteorology workshop.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 2,
+            providenceMultiplier: 3.5
           },
           {
             "optionText": "Host a 'Weather Awareness Day' to educate the community about weather forecasting.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 400,
+            providenceMultiplier: 2.5
           },
           {
             "optionText": "Declare that the unexpected rain was a community-wide water blessing.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 1500,
+            providenceMultiplier: 0
           }
         ]
       }
@@ -769,15 +979,22 @@ export const FollowersConfig: FollowerInfo[] = [
         "options": [
           {
             "optionText": "Apologize for the unexpected display and offer to organize a magical garden party.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 20,
+            providenceMultiplier: 0.5
           },
           {
             "optionText": "Collaborate with your neighbor on a magical garden makeover.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 2,
+            providenceMultiplier: 0.5
+
           },
           {
             "optionText": "Convince your neighbor that a garden turned zoo is the latest trend.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 100,
+            providenceMultiplier: 0
           }
         ]
       }
@@ -791,15 +1008,21 @@ export const FollowersConfig: FollowerInfo[] = [
         "options": [
           {
             "optionText": "Confess to your family and involve them in deciding the next steps.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 4,
+            providenceMultiplier: 0.8
           },
           {
             "optionText": "Withdraw from the show and propose a family talent show night.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 2,
+            providenceMultiplier: 0.9
           },
           {
             "optionText": "Claim that the reality show audition was a social experiment.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 20,
+            providenceMultiplier: 0.5
           }
         ]
       }
@@ -813,15 +1036,21 @@ export const FollowersConfig: FollowerInfo[] = [
         "options": [
           {
             "optionText": "Apologize and offer to help them level up a new character.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 29,
+            providenceMultiplier: 9.5
           },
           {
             "optionText": "Organize a gaming marathon where you both can play together.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 23,
+            providenceMultiplier: 0.5
           },
           {
             "optionText": "Convince your friend that virtual theft is a valid strategy in the gaming world.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 4000,
+            providenceMultiplier: 0
           }
         ]
       }
@@ -835,27 +1064,40 @@ export const FollowersConfig: FollowerInfo[] = [
         "options": [
           {
             "optionText": "Apologize and offer to create a lighter version for the party.",
-            "outcomeStep": null
+
+            "outcomeStep": null,
+            followers: 2,
+            providenceMultiplier: 6.5
           },
           {
             "optionText": "Host a mixology workshop to teach guests how to appreciate strong cocktails.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 200,
+            providenceMultiplier: 0.5
           },
           {
             "optionText": "Share a variety of cocktail recipes with guests, including lighter options.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 800,
+            providenceMultiplier: 0.5
           },
           {
             "optionText": "Infuse all future cocktails with even more alcohol to assert dominance.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 30,
+            providenceMultiplier: 0
           },
           {
             "optionText": "Declare yourself the 'Mixology Maven' and demand applause for your bold creations.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 200,
+            providenceMultiplier: 0.5
           },
           {
             "optionText": "Organize a cocktail-tasting event during an important business meeting.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 200,
+            providenceMultiplier: 0.5
           }
         ]
       }
@@ -869,15 +1111,21 @@ export const FollowersConfig: FollowerInfo[] = [
         "options": [
           {
             "optionText": "Apologize to the neighbors, organize a 'Water Balloon Cleanup Day,' and host a community water balloon fight.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 2,
+            providenceMultiplier: 5.5
           },
           {
             "optionText": "Host a 'Water Balloon Sculpture Contest' to turn the mishap into a creative and entertaining event.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 100,
+            providenceMultiplier: 3.5
           },
           {
             "optionText": "Declare the water balloon incident as a neighborhood-wide water festival and encourage water-themed celebrations.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 89,
+            providenceMultiplier: 0
           }
         ]
       }
@@ -891,15 +1139,21 @@ export const FollowersConfig: FollowerInfo[] = [
         "options": [
           {
             "optionText": "Apologize for the unintended changes, restore the original design, and offer a meditation workshop as compensation.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 7,
+            providenceMultiplier: 8.5
           },
           {
             "optionText": "Collaborate with the client to create a new and improved zen garden design, incorporating their preferences.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 2,
+            providenceMultiplier: 0.5
           },
           {
             "optionText": "Convince the client that the rearrangement is a form of zen expression, enhancing the garden's tranquility.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 89,
+            providenceMultiplier: 0
           }
         ]
       }
@@ -913,15 +1167,21 @@ export const FollowersConfig: FollowerInfo[] = [
         "options": [
           {
             "optionText": "Apologize to the participants, offer a free fitness session as compensation, and organize 'Adventure Fitness Day.'",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 200,
+            providenceMultiplier: 5.5
           },
           {
             "optionText": "Host a 'Mud Workout Challenge' to turn the mishap into a fun and memorable fitness experience.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 2,
+            providenceMultiplier: 3.5
           },
           {
             "optionText": "Declare mud workouts as the latest trend in fitness and encourage participants to embrace the unplanned mud experience.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 200,
+            providenceMultiplier: 0.5
           }
         ]
       }
@@ -935,18 +1195,25 @@ export const FollowersConfig: FollowerInfo[] = [
         "options": [
           {
             "optionText": "Acknowledge the mistake, apologize, and offer a special 'Harmony Concert' to showcase musical diversity.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 2,
+            providenceMultiplier: 5.5
           },
           {
             "optionText": "Incorporate the dissonance into a new composition, turning it into a unique musical piece.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 200,
+            providenceMultiplier: 2.5
           },
           {
             "optionText": "Convince the audience that dissonant notes are avant-garde and encourage appreciation for experimental music.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 6000,
+            providenceMultiplier: 4.5
           }
         ]
       }
     ]
   }
+
 ]
