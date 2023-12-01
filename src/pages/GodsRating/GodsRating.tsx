@@ -54,7 +54,6 @@ function GodsRating() {
           <Text
             size='xlarge'
             centered={true}
-            color={'dark'}
           >
             {god.rating[currentTimeBlock]}
           </Text>

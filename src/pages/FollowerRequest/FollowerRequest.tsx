@@ -44,7 +44,7 @@ function FollowerRequest( { followerIndex }: { followerIndex: number } ) {
 
         <Text size={'xlarge'} color='white'> {followerConfig.name} </Text>
         <Toast style={{ float: 'left' }} bubblePostion='left'>
-          <Text>
+          <Text size={'large'}>
             {followerRequest.requestText}
           </Text>
         </Toast>
@@ -55,7 +55,7 @@ function FollowerRequest( { followerIndex }: { followerIndex: number } ) {
         ) ?
           <>
             <Toast style={{ float: 'right' }} bubblePostion='right'>
-              <Text>
+              <Text size={'large'}>
                 {chosenOption.optionText}
               </Text>
             </Toast>
@@ -75,7 +75,11 @@ function FollowerRequest( { followerIndex }: { followerIndex: number } ) {
             {followerRequest.options.map((option, index) => {
               return (
                 <Button
-                  style={{ flexBasis: '50%'}}
+                  style={{
+                    flexBasis: '50%',
+                    lineHeight: '1.6'
+                }}
+                  size={'large'}
                   key={index.toString()}
                   color={index % 2 === 0 ? "warning" : undefined}
                   onClick={async () => {
