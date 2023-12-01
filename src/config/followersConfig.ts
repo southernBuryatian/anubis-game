@@ -24,7 +24,9 @@ export const FollowersConfig: FollowerInfo[] = [
         "options": [
           {
             "optionText": "Acknowledge the fear and anxiety, encourage focused study for the test! Success is within your reach.",
-            "outcomeStep": 1
+            "outcomeStep": 1,
+            followers: 0,
+            providenceMultiplier: 1.5,
           },
           {
             optionText: "Hey Eugene, why not form a study group with fellow history enthusiasts? Collective preparation not only eases the burden but also builds a supportive community. Together, you'll conquer the Papyrology test!",
@@ -34,7 +36,9 @@ export const FollowersConfig: FollowerInfo[] = [
           },
           {
             "optionText": "Eugene, you're not just a student; you're the Keeper of Ancient Wisdom. Passing the test is crucial for maintaining cosmic balance and preserving the knowledge of the ages. Rise to the occasion.",
-            "outcomeStep": 1
+            "outcomeStep": 1,
+            followers: 12,
+            providenceMultiplier: 0.5,
           }
         ]
       },
@@ -43,19 +47,27 @@ export const FollowersConfig: FollowerInfo[] = [
         "options": [
           {
             "optionText": "Setbacks are a natural part of any journey. Reevaluate your proposal, seek feedback, and persevere. The right opportunity might be just around the corner.",
-            "outcomeStep": 4
+            "outcomeStep": 4,
+            followers: 14,
+            providenceMultiplier: 1.5
           },
           {
             "optionText": "Eugene, take a moment to reflect on your passion and commitment. Consider reaching out to experienced archaeologists for mentorship and guidance. Their insights might open new doors for your expedition.",
-            "outcomeStep": 3
+            "outcomeStep": 3,
+            followers: 36,
+            providenceMultiplier: 1
           },
           {
             "optionText": "Hey Eugene, have you explored alternative funding sources, like crowdfunding or partnerships with archaeological institutions? Sometimes, unconventional paths lead to extraordinary discoveries.",
-            "outcomeStep": 3
+            "outcomeStep": 3,
+            followers: 2,
+            providenceMultiplier: 2
           },
           {
             "optionText": "Remember the inspiring story of the discovery of Richard III's tomb. Embrace the challenges as part of your unique journey. Your perseverance may lead to a groundbreaking archaeological find!",
-            "outcomeStep": 2
+            "outcomeStep": 2,
+            followers: 120,
+            providenceMultiplier: 0.5
           }
         ]
       },
@@ -64,19 +76,27 @@ export const FollowersConfig: FollowerInfo[] = [
         "options": [
           {
             "optionText": "Carefully document the findings and collaborate with renowned archaeologists to conduct in-depth research on the newly discovered tomb. Share the knowledge with the world, contributing to the understanding of ancient Egyptian history.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 10,
+            providenceMultiplier: 1
           },
           {
             "optionText": "Organize a press conference to share the groundbreaking discovery with the public. Initiate partnerships with museums and academic institutions to ensure the proper preservation and exhibition of the newfound artifacts.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 600,
+            providenceMultiplier: 1
           },
           {
             "optionText": "Consider forming an international team of archaeologists to continue exploring the site and uncover more details about the civilization you mentioned. This discovery could rewrite history!",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 10,
+            providenceMultiplier: 0.5
           },
           {
             "optionText": "Wow, I think you found my jackal-pet Misty's doghouse! Well done, Eugene! Tell her that I miss her",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 0,
+            providenceMultiplier: -1
           },
         ]
       },
@@ -85,15 +105,21 @@ export const FollowersConfig: FollowerInfo[] = [
         "options": [
           {
             "optionText": "Accept the teaching position with gratitude. Use the opportunity to inspire the next generation with your passion for history, sharing your knowledge and fostering a love for learning.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 10,
+            providenceMultiplier: 2.5
           },
           {
             "optionText": "Politely decline the teaching offer and continue searching for alternative funding options for your archaeological endeavors. You believe in the importance of your expedition and want to pursue it.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 578,
+            providenceMultiplier: 0.5
           },
           {
             "optionText": "Negotiate with the university to incorporate archaeological projects into your teaching role. Create a unique curriculum that blends theoretical knowledge with practical, hands-on experiences for your students.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 60,
+            providenceMultiplier: 1
           }
         ]
       },
@@ -102,15 +128,21 @@ export const FollowersConfig: FollowerInfo[] = [
         "options": [
           {
             "optionText": "Embrace the shift and enroll in game development courses. Channel your love for history into creating educational and engaging historical games that bring the past to life for players worldwide.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 10,
+            providenceMultiplier: 1
           },
           {
             "optionText": "Explore opportunities to collaborate with game developers who share your passion for history. Offer your expertise as a historical consultant to ensure accuracy and authenticity in historical video games.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 7,
+            providenceMultiplier: 2
           },
           {
             "optionText": "Continue to pursue archaeology and history as hobbies while maintaining your current career. Use your free time to contribute to historical game development projects as a side endeavor.",
-            "outcomeStep": null
+            "outcomeStep": null,
+            followers: 0,
+            providenceMultiplier: 1.5
           }
         ]
       }

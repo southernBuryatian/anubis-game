@@ -23,7 +23,7 @@ function OfficePage () {
   const getOfficeImage = (office: Offices) => {
     switch(office) {
       case Offices.Poor:
-        return (<LuxuryOffice/>)
+        return (<PoorOfficeImg/>)
       case Offices.Mediocre:
         return (<MediocreOfficeImg/>);
       case Offices.Luxury:
