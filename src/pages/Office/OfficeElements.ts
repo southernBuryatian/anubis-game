@@ -5,14 +5,15 @@ export const OfficeElements = {
   clockElementId: 'clock',
   chairElementId: 'chair',
   scalesElementId: 'scales',
+  plantsElementId: 'greens',
+  secondMonitorElementId: 'sec-monitor',
+  pictureElementId: 'pharaoh'
 }
 
-//todo: balance considering followers config
-
 export const OfficeUpgrades = {
-  [Offices.Poor]: 6,
-  [Offices.Mediocre]: 1000,
-  [Offices.Luxury]: 1000000
+  [Offices.Poor]: 400,
+  [Offices.Mediocre]: 8000,
+  [Offices.Luxury]: 10000000
 }
 
 export const OfficeCoolness = [Offices.Poor, Offices.Mediocre, Offices.Luxury];
