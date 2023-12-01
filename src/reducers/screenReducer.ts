@@ -7,6 +7,7 @@ export enum Screens {
   FollowersList,
   FollowerDialogue,
   GodsRating,
+  Creators,
   Ending
 }
 
@@ -34,6 +35,9 @@ export const screenSlice = createSlice({
     openGodsRating: (state: screenState) => {
       state.currentScreenId = Screens.GodsRating;
     },
+    openCreators: (state: screenState) => {
+      state.currentScreenId = Screens.Creators;
+    },
     closeDesktop: (state: screenState) => {
       state.currentScreenId = Screens.Office;
     },
@@ -43,6 +47,6 @@ export const screenSlice = createSlice({
   },
 })
 
-export const { openFollowerWindow, openDesktopScreen, openFollowersDialogues, closeDesktop, openGodsRating, openEndingScreen } = screenSlice.actions
+export const { openFollowerWindow, openDesktopScreen, openFollowersDialogues, closeDesktop, openGodsRating, openEndingScreen, openCreators } = screenSlice.actions
 
 export default screenSlice.reducer

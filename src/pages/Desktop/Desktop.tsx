@@ -1,6 +1,6 @@
 import './Desktop.css';
 import { useDispatch } from 'react-redux';
-import { openFollowersDialogues, openGodsRating } from '../../reducers/screenReducer';
+import { openCreators, openFollowersDialogues, openGodsRating } from '../../reducers/screenReducer';
 import { ReactComponent as TempleOSLogo } from './TempleOS.svg'
 import GodMighty from './AppIcons/GodMighty.png'
 import Creators from './AppIcons/Creators.png'
@@ -37,7 +37,7 @@ function DesktopPage () {
         <div className="DesktopWrapper">
           <AppIcon onClick={ () => {dispatch(openFollowersDialogues()); } } imgSrc={WorshiperService} imgAlt={WorshiperService} AppName={'Worshiper Service'} />
           <AppIcon onClick={ () => {dispatch(openGodsRating()); } } imgSrc={GodMighty} imgAlt={GodMighty} AppName={'GodMighty'} />
-          <AppIcon onClick={ () => {dispatch(openFollowersDialogues()); } } imgSrc={Creators} imgAlt={Creators} AppName={'Creators'} />
+          <AppIcon onClick={ () => {dispatch(openCreators()); } } imgSrc={Creators} imgAlt={Creators} AppName={'Creators'} />
         </div>
       </ComputerScreenPageWrapper>
   )

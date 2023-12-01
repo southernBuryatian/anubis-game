@@ -10,6 +10,7 @@ import SpeechBalloon from './components/SpeechBaloon/SpeechBalloon';
 import GodsRating from './pages/GodsRating/GodsRating';
 import Cutscene from './pages/Cutscene/Cutscene';
 import { gameDuration } from './reducers/timeReducer';
+import Creators from './pages/Creators/Creators';
 
 function App() {
   const currentFollowerId = useSelector((state: ReturnType<typeof store.getState>) => state.currentFollower.currentFollowerId);
@@ -38,7 +39,9 @@ function App() {
       case Screens.FollowerDialogue:
         return ((currentFollowerId !== null) ? <FollowerRequest followerIndex={currentFollowerId}/> : <OfficePage/>);
       case Screens.FollowersList:
-        return (<FollowersDialogues/>);
+        return (<FollowersDialogues/>)
+      case Screens.Creators:
+        return (<Creators/>)
       case Screens.Ending:
         return (<Cutscene scene={'Ending'}/>)
       default:

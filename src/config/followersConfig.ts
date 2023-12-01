@@ -1,8 +1,8 @@
 interface replyOption {
   optionText: string,
   outcomeStep: number | null,
-  followers?: number,
-  providenceMultiplier?: number,
+  followers: number,
+  providenceMultiplier: number,
 }
 
 interface storylineStep {
@@ -23,19 +23,19 @@ export const FollowersConfig: FollowerInfo[] = [
         "requestText": "Great Anubis, the guide of the underworld. It is desperate times therefore I am reaching you. I hope my prayers find you well. Tell me, please, if there is anything beyond this world? I am afraid that I might fail my Papyrology test, and my heart will explode.",
         "options": [
           {
-            "optionText": "Acknowledge the fear and anxiety, encourage focused study for the test! Success is within your reach.",
+            "optionText": "Acknowledge the fear and anxiety, encourage focused study for the test! Success is within your reach. Hey, by chance any clue if I should get a thing called smart-phone? Does TempleOS work on a it?",
             "outcomeStep": 1,
             followers: 0,
             providenceMultiplier: 1.5,
           },
           {
-            optionText: "Hey Eugene, why not form a study group with fellow history enthusiasts? Collective preparation not only eases the burden but also builds a supportive community. Together, you'll conquer the Papyrology test!",
+            "optionText": "Hey Eugene, why not form a study group with fellow history enthusiasts? Collective preparation not only eases the burden but also builds a supportive community. Together, you'll conquer the Papyrology test!  Wait, also do you happen to know how the water cooler is refiled these days? Is it Nile mechanism or what? ",
             outcomeStep: 1,
             followers: 6,
             providenceMultiplier: 1,
           },
           {
-            "optionText": "Eugene, you're not just a student; you're the Keeper of Ancient Wisdom. Passing the test is crucial for maintaining cosmic balance and preserving the knowledge of the ages. Rise to the occasion.",
+            "optionText": "Eugene, you're not just a student; you're the Keeper of Ancient Wisdom. Passing the test is crucial for maintaining cosmic balance and preserving the knowledge of the ages. Rise to the occasion. I guess…  Well... Honestly, I don't know how to do this job. It's just the beginning, and my entire physical vessel is still pretty numb. Is there any perfume available in this modern age? Any recommendations? I think I might stink…",
             "outcomeStep": 1,
             followers: 12,
             providenceMultiplier: 0.5,
@@ -46,25 +46,25 @@ export const FollowersConfig: FollowerInfo[] = [
         "requestText": "Mighty Anubis, I have recently graduated from the university and am enthusiastic about founding my own private archaeological expedition. However, I've been facing rejection after rejection in my funding applications. Frustration and self-doubt are starting to creep in. What advice would you offer me?",
         "options": [
           {
-            "optionText": "Setbacks are a natural part of any journey. Reevaluate your proposal, seek feedback, and persevere. The right opportunity might be just around the corner.",
+            "optionText": "Setbacks are a natural part of any journey. Reevaluate your proposal, seek feedback, and persevere. The right opportunity might be just around the corner. I sometimes fail too, yesterday they packed me the wrong groceries..  Btw why did you quit following Hermes Trismegistus?  I thought he was a cool guy! ",
             "outcomeStep": 4,
             followers: 14,
             providenceMultiplier: 1.5
           },
           {
-            "optionText": "Eugene, take a moment to reflect on your passion and commitment. Consider reaching out to experienced archaeologists for mentorship and guidance. Their insights might open new doors for your expedition.",
+            "optionText": "Eugene, take a moment to reflect on your passion and commitment. Consider reaching out to experienced archaeologists for mentorship and guidance. Their insights might open new doors for your expedition. Yesterday I learned to use elevator btw, new doors can open you know …Btw why did you quit following Hermes Trismegistus?  I thought he was a cool guy!",
             "outcomeStep": 3,
             followers: 36,
             providenceMultiplier: 1
           },
           {
-            "optionText": "Hey Eugene, have you explored alternative funding sources, like crowdfunding or partnerships with archaeological institutions? Sometimes, unconventional paths lead to extraordinary discoveries.",
+            "optionText": "Hey Eugene, have you explored alternative funding sources, like crowdfunding or partnerships with archaeological institutions? Sometimes, unconventional paths lead to extraordinary discoveries. I took yesterday a new route to the divine supermarket and it lead me to a miracle of e-scootering! Btw why did you quit following Hermes Trismegistus?  I thought he was a cool guy! ",
             "outcomeStep": 3,
             followers: 2,
             providenceMultiplier: 2
           },
           {
-            "optionText": "Remember the inspiring story of the discovery of Richard III's tomb. Embrace the challenges as part of your unique journey. Your perseverance may lead to a groundbreaking archaeological find!",
+            "optionText": "Remember the inspiring story of the discovery of Richard III's tomb. I watched yesterday a movie about it, totally recommend!  So embrace the challenges as part of your unique journey. Your perseverance may lead to a groundbreaking archaeological find! Or not. Do you think  I am getting better at this? Btw why did you quit following Hermes Trismegistus?  I thought he is a cool guy! ",
             "outcomeStep": 2,
             followers: 120,
             providenceMultiplier: 0.5
@@ -72,22 +72,22 @@ export const FollowersConfig: FollowerInfo[] = [
         ]
       },
       {
-        "requestText": "hey, Anubis, how are you doing? My expedition was a great success. I found ancient scripts, and something that I believe might be the remains of undiscovered civilization... What should be my next move?",
+        "requestText": "hey, Anubis, how are you doing? My expedition was a great success. I found ancient scripts, and something that I believe might be the remains of undiscovered civilization... What should be my next move? Also I haven’t found though that Richard III movie…can you give a link? ",
         "options": [
           {
-            "optionText": "Carefully document the findings and collaborate with renowned archaeologists to conduct in-depth research on the newly discovered tomb. Share the knowledge with the world, contributing to the understanding of ancient Egyptian history.",
+            "optionText": "Carefully document the findings and collaborate with renowned archaeologists to conduct in-depth research on the newly discovered tomb. Share the knowledge with the world, contributing to the understanding of ancient Egyptian history. Regarding the movie - I am afraid our divine policy prohibits me from directly sharing others' intellectual property. I apologize for any inconvenience.",
             "outcomeStep": null,
             followers: 10,
             providenceMultiplier: 1
           },
           {
-            "optionText": "Organize a press conference to share the groundbreaking discovery with the public. Initiate partnerships with museums and academic institutions to ensure the proper preservation and exhibition of the newfound artifacts.",
+            "optionText": "Organize a press conference to share the groundbreaking discovery with the public. Initiate partnerships with museums and academic institutions to ensure the proper preservation and exhibition of the newfound artifacts. Regarding the movie - I am afraid our divine policy prohibits me from directly sharing others' intellectual property. I apologize for any inconvenience. ",
             "outcomeStep": null,
             followers: 600,
             providenceMultiplier: 1
           },
           {
-            "optionText": "Consider forming an international team of archaeologists to continue exploring the site and uncover more details about the civilization you mentioned. This discovery could rewrite history!",
+            "optionText": "Consider forming an international team of archaeologists to continue exploring the site and uncover more details about the civilization you mentioned. This discovery could rewrite history! Regarding the movie - I am afraid our divine policy prohibits me from directly sharing others' intellectual property. I apologize for any inconvenience.",
             "outcomeStep": null,
             followers: 10,
             providenceMultiplier: 0.5

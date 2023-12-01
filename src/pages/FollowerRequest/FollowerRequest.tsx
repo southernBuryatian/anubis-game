@@ -59,22 +59,14 @@ function FollowerRequest( { followerIndex }: { followerIndex: number } ) {
                 {chosenOption.optionText}
               </Text>
             </Toast>
-            {
-              chosenOption.followers
-              &&
               <Badge
                 backgroundColor={'error'}
-                text={`${followerRequest.options[followerStoryline.chosenOptions[storylineStepId]].followers} followers`}
+                text={`${chosenOption.followers} followers`}
               />
-            }
-            {
-              typeof chosenOption.providenceMultiplier === 'number'
-              &&
               <Badge
                 backgroundColor={'error'}
-                text={`${standardProvidence} providence`}
+                text={`${standardProvidence * chosenOption.providenceMultiplier} providence`}
               />
-            }
           </>
 
           :

@@ -10,10 +10,11 @@ export const OfficeElements = {
   pictureElementId: 'pharaoh'
 }
 
+// todo: remove hack
 export const OfficeUpgrades = {
-  [Offices.Poor]: 400,
-  [Offices.Mediocre]: 8000,
-  [Offices.Luxury]: 10000000
+  [Offices.Poor]: 35,
+  [Offices.Mediocre]: 2500,
+  [Offices.Luxury]: 10000000000
 }
 
 export const OfficeCoolness = [Offices.Poor, Offices.Mediocre, Offices.Luxury];

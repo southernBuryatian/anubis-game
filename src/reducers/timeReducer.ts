@@ -4,7 +4,7 @@ interface TimeState {
   currentTimeBlock: number,
 }
 
-export const gameDuration = 9;
+export const gameDuration = 7;
 
 export const timeSlice = createSlice({
   name: 'time',
