@@ -32,7 +32,7 @@ function FollowersDialogues() {
         console.log(follower.name);
       }
       const storylineStepId = answers[index].currentStorylineStepId;
-
+      
       return <div
         key={index}
         onClick={ () =>
@@ -58,7 +58,7 @@ function FollowersDialogues() {
             { follower.name }
           </Text>
           {
-            !Object.keys(answers[index].chosenOptions)[storylineStepId] &&
+            Object.keys(answers[index].chosenOptions)[storylineStepId] === undefined &&
             <span className="nes-ui-badge nes-ui-is-error FollowerListItemBadge">Not answered</span>
           }
         </Container>
