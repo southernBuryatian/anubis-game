@@ -331,7 +331,8 @@ export const FollowersConfig: FollowerInfo[] = [
     "name": "Lucy the Lumberjack",
     "storyline": [
       {
-        "requestText": "Lucy accidentally hugged a coworker, and now they won't stop sharing personal information.",
+        "requestText": "I accidentally hugged a coworker, and now they won't stop sharing personal information." +
+          " I don't want to be mean, but how could I stop this flood?",
         "options": [
           {
             "optionText": "Politely talk to the coworker about personal space.",
@@ -377,7 +378,8 @@ export const FollowersConfig: FollowerInfo[] = [
     "name": "Gary the Green Thumb",
     "storyline": [
       {
-        "requestText": "Gary's well-tended garden is attracting too many tourists, causing disturbances in the neighborhood.",
+        "requestText": "I retired to spend the rest of my life calmly growing my plants, but.." +
+          "It seems that my well-tended garden is attracting too many tourists, causing disturbances in the neighborhood.",
         "options": [
           {
             "optionText": "Organize guided garden tours at scheduled times.",
@@ -423,7 +425,8 @@ export const FollowersConfig: FollowerInfo[] = [
     "name": "Olivia the Office Analyst",
     "storyline": [
       {
-        "requestText": "Olivia predicted a project failure, causing panic in the workplace.",
+        "requestText": "I predicted a project failure, causing panic in the workplace." +
+          " Now I think that the only failure is me... What should I do, the Almighty?",
         "options": [
           {
             "optionText": "Focus on presenting solutions to avoid failure.",
@@ -469,7 +472,8 @@ export const FollowersConfig: FollowerInfo[] = [
     "name": "Max the Music Enthusiast",
     "storyline": [
       {
-        "requestText": "Max composed a catchy jingle for a commercial, and now it's stuck in everyone's head.",
+        "requestText": "I composed a catchy jingle for a commercial, and now it's stuck in everyone's head." +
+          " Even my cat seems to meow it!",
         "options": [
           {
             "optionText": "Create a new jingle that's more subtle.",
@@ -515,7 +519,14 @@ export const FollowersConfig: FollowerInfo[] = [
     "name": "Fiona the Farm-to-Table Farmer",
     "storyline": [
       {
-        "requestText": "Fiona's farm-fresh eggs are revealing too much about people's personal lives, causing discomfort.",
+        "requestText": "Erm... Hi. " +
+          "So I am a farmer, right? And I sell farm-fresh eggs. From chickens. To people. " +
+          "And it is kinda family business since not so long ago. " +
+          "Cause my sister came back to the farm from Uni, " +
+          "where she was studying sales or this kind of stuff. " +
+          "And she insisted on attaching some fortune tellings to eggs. " +
+          "And guess what, apparently people are uncomfortable! They say that our eggs " +
+          "are revealing too much about people's personal lives.",
         "options": [
           {
             "optionText": "Stop selling eggs with fortunes attached.",
@@ -561,7 +572,7 @@ export const FollowersConfig: FollowerInfo[] = [
     "name": "Dexter the Distinguished Gentleman",
     "storyline": [
       {
-        "requestText": "Dexter's beard has become a local sensation, and people constantly want to touch it for luck.",
+        "requestText": "Somehow my beard has become a local sensation, and people constantly want to touch it for luck.",
         "options": [
           {
             "optionText": "Politely educate people about personal space.",
@@ -607,7 +618,7 @@ export const FollowersConfig: FollowerInfo[] = [
     "name": "Penelope the Painter",
     "storyline": [
       {
-        "requestText": "Penelope accidentally used the wrong color on a community mural, causing confusion.",
+        "requestText": "I accidentally used the wrong color on a community mural, causing confusion! I am a walking disaster!",
         "options": [
           {
             "optionText": "Organize a community painting day to correct the mural.",
@@ -951,7 +962,7 @@ export const FollowersConfig: FollowerInfo[] = [
     "name": "Gus the Gardening Guru",
     "storyline": [
       {
-        "requestText": "I accidentally planted pumpkins instead of tomatoes in my neighbor's garden. What should I do?",
+        "requestText": "I call myself a Gardening Guru, but guess what! I accidentally planted pumpkins instead of tomatoes in my neighbor's garden. What should I do?",
         "options": [
           {
             "optionText": "Apologize for the pumpkin mishap, offer to help repair the damaged tomatoes, and organize a 'Harvest Harmony' event.",

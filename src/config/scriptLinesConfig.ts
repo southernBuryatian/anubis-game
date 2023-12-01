@@ -12,7 +12,7 @@ export const scriptLinesConfig = {
   ],
   Office: {
     [Offices.Poor]: {
-      firstLook: 'What a dull office. Three thousand of years ago work conditions were much better.',
+      firstLook: 'What a dull office. Three thousand years ago work conditions were much better.',
       [OfficeElements.scalesElementId]: 'Ah, my dear old scales. ',
       [OfficeElements.clockElementId]: 'I wonder, who decided on this clock design. Anyway, Isis said that if I want to finish work for now, I can \'double-click\' this clock - whatever this means.',
       [OfficeElements.monitorElementId]: '',
