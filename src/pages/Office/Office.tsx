@@ -1,5 +1,6 @@
 import { ReactComponent as MediocreOfficeImg } from './Images/mediocreOffice.svg';
 import { ReactComponent as PoorOfficeImg } from './Images/poorOffice.svg';
+import { ReactComponent as LuxuryOffice } from './Images/luxuryOffice.svg';
 import SvgWrapper from '../../components/SvgWrapper/SvgWrapper';
 import { closeDesktop, openDesktopScreen } from '../../reducers/screenReducer';
 import { useDispatch, useSelector } from 'react-redux';
@@ -26,7 +27,7 @@ function OfficePage () {
       case Offices.Mediocre:
         return (<MediocreOfficeImg/>);
       case Offices.Luxury:
-        return (<MediocreOfficeImg/>)
+        return (<LuxuryOffice/>)
       default:
         return (<PoorOfficeImg/>);
     }
@@ -88,6 +89,33 @@ function OfficePage () {
           callback: () => {
             dispatch(openScriptLine({
               text: scriptLines[OfficeElements.chairElementId],
+              speaker: GodsCharacters.Anubis
+            }))
+          }
+        },
+        {
+          elementId: OfficeElements.plantsElementId,
+          callback: () => {
+            dispatch(openScriptLine({
+              text: scriptLines[OfficeElements.plantsElementId],
+              speaker: GodsCharacters.Anubis
+            }))
+          }
+        },
+        {
+          elementId: OfficeElements.secondMonitorElementId,
+          callback: () => {
+            dispatch(openScriptLine({
+              text: scriptLines[OfficeElements.secondMonitorElementId],
+              speaker: GodsCharacters.Anubis
+            }))
+          }
+        },
+        {
+          elementId: OfficeElements.pictureElementId,
+          callback: () => {
+            dispatch(openScriptLine({
+              text: scriptLines[OfficeElements.pictureElementId],
               speaker: GodsCharacters.Anubis
             }))
           }

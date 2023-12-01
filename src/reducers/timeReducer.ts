@@ -13,7 +13,7 @@ export const timeSlice = createSlice({
   },
   reducers: {
     switchTimeBlock: (state: TimeState) => {
-      if (state.currentTimeBlock < gameDuration) {
+      if (state.currentTimeBlock <= gameDuration) {
         state.currentTimeBlock = state.currentTimeBlock + 1;
       }
     },

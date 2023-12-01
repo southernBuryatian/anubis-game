@@ -1,12 +1,11 @@
 import React from 'react';
 import './FollowerRequest.css';
-import { Button, Toast, Text, Menu, Modal, Spacer, Header, Heading, IconButton, PixelIcon, ModalContent, Badge } from "nes-ui-react";
+import { Button, Toast, Text, Menu, ModalContent, Badge } from "nes-ui-react";
 import { FollowersConfig } from '../../config/followersConfig';
 import { useDispatch, useSelector } from 'react-redux';
 import { chooseAnswer } from '../../reducers/answersReducer';
 import { openFollowersDialogues } from '../../reducers/screenReducer';
 import store from '../../reducers/store';
-import ComputerScreenPageWrapper from '../../components/ComputerScreenPageWrapper/ComputerScreenPageWrapper';
 import { changeFollowersAmount, changeProvidenceAmount, standardProvidence } from '../../reducers/providenceReducer';
 import ComputerAppWrapper from '../../components/ComputerAppWrapper/ComputerAppWrapper';
 
@@ -39,7 +38,7 @@ function FollowerRequest( { followerIndex }: { followerIndex: number } ) {
   // todo: iterate storyline to display all that available
 
   return (
-    <ComputerAppWrapper>
+    <ComputerAppWrapper onCloseCallback={() => {dispatch(openFollowersDialogues())}}>
       <ModalContent className='ModalContent'>
         {imageSrc && <img src={imageSrc} className="FollowerAvatar" alt={followerConfig.name} />}
 
@@ -60,22 +59,14 @@ function FollowerRequest( { followerIndex }: { followerIndex: number } ) {
                 {chosenOption.optionText}
               </Text>
             </Toast>
-            {
-              chosenOption.followers
-              &&
               <Badge
                 backgroundColor={'error'}
-                text={`${followerRequest.options[followerStoryline.chosenOptions[storylineStepId]].followers} followers`}
+                text={`${chosenOption.followers} followers`}
               />
-            }
-            {
-              typeof chosenOption.providenceMultiplier === 'number'
-              &&
               <Badge
                 backgroundColor={'error'}
-                text={`${standardProvidence} providence`}
+                text={`${standardProvidence * chosenOption.providenceMultiplier} providence`}
               />
-            }
           </>
 
           :

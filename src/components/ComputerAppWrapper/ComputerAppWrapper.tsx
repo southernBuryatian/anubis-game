@@ -4,8 +4,9 @@ import { Header, Heading, IconButton, Modal, PixelIcon, Spacer } from 'nes-ui-re
 import ComputerScreenPageWrapper from '../../components/ComputerScreenPageWrapper/ComputerScreenPageWrapper';
 import React, { ReactNode } from 'react';
 
-function ComputerAppWrapper({ children }: { children: ReactNode} ){
+function ComputerAppWrapper({ onCloseCallback, children }: { onCloseCallback?: () => void, children: ReactNode} ){
   const dispatch = useDispatch();
+  const onClick = onCloseCallback ? () => { onCloseCallback() } : () => {dispatch(openDesktopScreen())}
 
   return (
     <ComputerScreenPageWrapper>
@@ -14,9 +15,7 @@ function ComputerAppWrapper({ children }: { children: ReactNode} ){
           <Spacer />
           <Heading dense></Heading>
           <Spacer />
-          <IconButton color="error" size="small" onClick={() => {
-            dispatch(openDesktopScreen())
-          }}>
+          <IconButton color="error" size="small" onClick={() => onClick()}>
             <PixelIcon name="pixelicon-close" size='small' />
           </IconButton>
         </Header>

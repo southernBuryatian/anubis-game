@@ -26,11 +26,20 @@ export const scriptLinesConfig = {
       [OfficeElements.chairElementId]: 'Ah, the chair looks like just what I need for my old godly back. Thank you, Isis, I guess?'
     },
     [Offices.Luxury]: {
-      firstLook: '',
-      [OfficeElements.scalesElementId]: 'Ah, my dear old scales. ',
-      [OfficeElements.clockElementId]: 'I wonder, who decided on this clock design. Anyway, Isis said that if I want to finish work for now, I can \'double-click\' this clock - whatever this means.',
+      firstLook: 'Ahh, a decent workplace. Finally!',
+      [OfficeElements.scalesElementId]: 'Are they... digital now? ',
+      [OfficeElements.clockElementId]: 'I am getting used to its weird design. And to its \'double-click\' feature too.',
       [OfficeElements.monitorElementId]: '',
-      [OfficeElements.chairElementId]: '',
+      [OfficeElements.chairElementId]: 'Oh, so slippery! Riding this chair, I probably could outrun Ra\'s fancy barque.',
+      [OfficeElements.plantsElementId]: 'How do they keep it alive? Where is an irrigation system?',
+      [OfficeElements.secondMonitorElementId]: 'Seems that I need to learn how to use yet another device... I\'ll deal with it later, I promise.',
+      [OfficeElements.pictureElementId]: 'I remember this one! Very nice person, very religious.',
     }
-  }
+  },
+  Ending: [
+    { "character": GodsCharacters.Isis, "line": "It is the end of your probation, dear." },
+    { "character": GodsCharacters.Anubis, "line": "Wait, did I have a probation?" },
+    { "character": GodsCharacters.Anubis, "line": "It is funny... Sometimes I felt some invisible power to guide me." },
+    { "character": GodsCharacters.Isis, "line": "It is true, dear. But now it is time for you two to part. Their game ends here, but your path just begins." },
+  ]
 }

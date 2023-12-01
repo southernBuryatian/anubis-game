@@ -14,7 +14,7 @@ function FollowersDialogues() {
   const currentTimeBlock = useSelector((state: ReturnType<typeof store.getState>) => state.time).currentTimeBlock;
   const answers = useSelector((state: ReturnType<typeof store.getState>) => state.storylines);
 
-  const followersADay = 5;
+  const followersADay = 6;
 
   const content = FollowersConfig.slice(0, followersADay * currentTimeBlock + 1).map(
     (follower, index) => {
