@@ -8,3 +8,8 @@ export const GodsRatingConfig = [
   { "name": "Anansi", "rating": [0, 1000, 2000, 3000, 4000, 5000, 6000] }
 ];
 
+// todo: this hardcode is probably the worst I've ever done, but it's fine for MVP
+
+export const LokiCheatingTimeblock = 2;
+export const LokiCaughtTimeblock = LokiCheatingTimeblock + 1;
+
